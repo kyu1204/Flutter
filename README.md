@@ -23,3 +23,16 @@
 ### Flutter vs React Native
 1. If you want a customized UI and design for everything, use Flutter.
 2. If you want to follow the UI and widget of the host OS, use React Native.
+---
+## Hello Flutter
+### Installation (Apple Silicon MacOs)
+#### Install Flutter SDK
+1. `arch -arm64 brew install --cask flutter`
+	1. If not working, `brew uninstall dart-sdk` and reinstall
+#### Install iOS Simulator
+1. follow guide
+   > https://docs.flutter.dev/get-started/install/macos#deploy-to-ios-devices
+#### Install Android Simulator
+1. `arch -arm64 brew install --cask android-studio`
+2. follow guide
+   > https://docs.flutter.dev/get-started/install/macos#android-setup
