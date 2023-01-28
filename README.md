@@ -2,16 +2,16 @@
 ## Introduction
 ### Why Flutter?
 1. Fluter is multi cross platform library
-	1. 하나의 언어와 프레임 워크로 web, app, Linux, Window, OSX, 임베디드 까지 지원한다.
-2. Flutter을 사용해서 만든 awesome 한 앱, 웹들이 있다.
-	1. 앱
-		1. 구글 페이
-		2. wondrous
-		3. bmw
+	1. One Code and Framework supports Web, Mobile App, Window, MacOS, Linux, and embedded.
+2. There is an awesome Web and Mobile App, created using Flutter.
+	1. Mobile Application
+		1. Google Pay
+		2. Wondrous
+		3. BMW
 		4. etc
 	2. 웹
-		1. 구글 포토부스
-		2. 핀볼
+		1. Google I/O Photo Booth
+		2. Pin Ball
 		3. etc
 ### How Flutter Works
 1. Flutter Code는 C/C++ 로 만든 엔진 위에서 돌아간다
