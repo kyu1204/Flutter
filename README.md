@@ -19,7 +19,7 @@
 2. The Flutter Engine does not request rendering from the host OS.
 3. All UI and animations run on the engine.
 4. However, host OS widgets and animations are not available because all widgets and animations run on the engine.
-5. Flutter가 제공하는 iOS 또는 안드로이드 위젯과 같은 형태는 모두 Fake 다. all so flutter supports looks like iOS and android widget is fake.
+5. So any iOS or Android type widgets provided by Flutter is fake.
 ### Flutter vs React Native
-1. 만약 모든것이 커스터마이징된 UI 및 디자인을 원할 경우 Flutter를 사용해라.
-2. 호스트 OS의 위젯을 따르고 싶다면 React Native를 사용해라.
+1. If you want a customized UI and design for everything, use Flutter.
+2. If you want to follow the UI and widget of the host OS, use React Native.
