@@ -12,7 +12,7 @@
 	2. 웹
 		1. [Google I/O Photo Booth](https://photobooth.flutter.dev/#/)
 		2. [Flutter Plasma](https://flutterplasma.dev/)
-		3. [Flutter Pin Ball](https://pinball.flutter.dev/#/)
+		3. [Flutter Pinball](https://pinball.flutter.dev/#/)
 		4. [etc](https://flutter.dev/showcase)
 ### How Flutter Works
 1. The Flutter Code runs on engines created in **`C/C++`**.
@@ -107,6 +107,6 @@
        }
    }
    ```
-![[Pasted image 20230129165125.png]]
+![[assets/Pasted image 20230129165125.png]]
 ---
 ## UI Challenge
