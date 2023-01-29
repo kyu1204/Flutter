@@ -148,3 +148,20 @@
 ![Developer Tools](/Assets/20230129183535.png)
 
 ### [Button Section](Code/toonflix/lib/main.dart)
+1. Container (a.k.a div)
+	1. decoration
+		1. BoxDecoration
+			1. color
+			2. borderRadius
+
+![Button Section](/Assets/20230129201219.png)
+
+### VSCode Settings
+1. Awesome Flutter Settings
+   ```json
+   "editor.codeActionsOnSave": {
+       "source.fixAll": true
+   },
+   "dart.previewFlutterUiGuides": true,
+   ```
+### Code Actions
