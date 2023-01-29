@@ -112,3 +112,33 @@
 
 ---
 ## UI Challenge
+### Header
+1. Column
+	1. mainAxisAlignment: vertical
+	2. crossAxisAlignment: horizontal
+	3. children: List for Widgets
+2. Row
+	1. mainAxisAlignment: horizontal
+	2. crossAxisAlignment: vertical
+	3. children: List for Widgets
+3. SizedBox: An empty box with a size.
+4. Colors
+	1. withOpacity: change opacity
+	2. Color(0xFF181818): specific color setting for hex value
+5. Text
+	1. TextStyle
+		1. color
+		2. fontSize
+		3. fontWeight
+6. Padding
+	1. padding
+		1. EdgeInsets
+			1. all
+			2. only
+				1. top
+				2. bottom
+				3. left
+				4. right
+			3. symmetric
+				1. vertical
+				2. horizontal
