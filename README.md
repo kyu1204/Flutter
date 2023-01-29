@@ -52,7 +52,7 @@
 ### [Hello World](Code/toonflix/lib/main.dart)
 1. The **runApp()** in the **main** function is the starting point for the application.
 2. The **runApp()** receives **Widget** type parameters.
-3. The Flutter are all made it **Widgets**.
+3. Everything in Flutter is a **Widget**.
 4. To convert the class we created into a **Widget**, we need to **inherit the core Widget**.
    ```dart
    void main() {
