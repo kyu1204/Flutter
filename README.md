@@ -218,3 +218,14 @@
 ![Cards](/Assets/20230129213637.png)
 
 ### Icons and Transforms
+1. Icon
+	1. Icons (many icons prepared)
+	2. color
+	3. size
+2. Transform
+	1. Transform.scale (size)
+		1. scale
+	2. Transform.translate (offset)
+		1. offset
+			1. Offset(dx, dy)
+3. 
