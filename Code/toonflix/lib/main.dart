@@ -8,11 +8,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      backgroundColor: Color(0xFF181818),
-      body: Padding(
+      home: Scaffold(
+        backgroundColor: Color(0xFF181818),
+        body: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 40,
+            horizontal: 20,
           ),
           child: Column(
             children: [
@@ -45,7 +45,9 @@ class App extends StatelessWidget {
                 ],
               )
             ],
-          )),
-    ));
+          ),
+        ),
+      ),
+    );
   }
 }
