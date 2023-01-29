@@ -36,4 +36,5 @@
 1. `arch -arm64 brew install --cask android-studio`
 2. follow guide
    > https://docs.flutter.dev/get-started/install/macos#android-setup
-3. If ``
+3. If an `Unable to find bundled Java version.` error, follow this guide
+   > https://github.com/flutter/flutter/issues/118502#issuecomment-1383215722
