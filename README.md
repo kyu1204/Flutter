@@ -167,3 +167,5 @@
 ### Code Actions
 1. Click Bulb or Input Command (Command + .)
 2. Choose awesome actions.
+### Reusable Widgets
+1. If you want created custom widgets, define the class and inherit the core widget. 
