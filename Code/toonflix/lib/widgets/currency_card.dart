@@ -5,7 +5,7 @@ class CurrencyCard extends StatelessWidget {
   final IconData icon;
   final bool isInverted;
 
-  final blackColor = const Color(0xFF1F2123);
+  final _blackColor = const Color(0xFF1F2123);
 
   const CurrencyCard({
     super.key,
@@ -21,7 +21,7 @@ class CurrencyCard extends StatelessWidget {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-          color: isInverted ? Colors.white : blackColor,
+          color: isInverted ? Colors.white : _blackColor,
           borderRadius: BorderRadius.circular(25)),
       child: Padding(
         padding: const EdgeInsets.all(30),
@@ -33,8 +33,8 @@ class CurrencyCard extends StatelessWidget {
               children: [
                 Text(
                   name,
-                  style: const TextStyle(
-                    color: isInverted ?  Colors.white,
+                  style: TextStyle(
+                    color: isInverted ? _blackColor : Colors.white,
                     fontSize: 32,
                     fontWeight: FontWeight.w600,
                   ),
@@ -46,8 +46,8 @@ class CurrencyCard extends StatelessWidget {
                   children: [
                     Text(
                       amount,
-                      style: const TextStyle(
-                        color: Colors.white,
+                      style: TextStyle(
+                        color: isInverted ? _blackColor : Colors.white,
                         fontSize: 20,
                       ),
                     ),
@@ -57,7 +57,9 @@ class CurrencyCard extends StatelessWidget {
                     Text(
                       code,
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.8),
+                        color: isInverted
+                            ? _blackColor
+                            : Colors.white.withOpacity(0.8),
                         fontSize: 20,
                       ),
                     ),
@@ -71,7 +73,7 @@ class CurrencyCard extends StatelessWidget {
                 offset: const Offset(-5, 12),
                 child: Icon(
                   icon,
-                  color: Colors.white,
+                  color: isInverted ? _blackColor : Colors.white,
                   size: 88,
                 ),
               ),
