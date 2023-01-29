@@ -159,6 +159,7 @@ class App extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const Icon(Icons.euro)
                     ],
                   ),
                 ),
