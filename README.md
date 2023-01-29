@@ -215,6 +215,6 @@
 3. Column
 4. Padding
 5. Text
-![Cards](20230129213637.png)
+![Cards](/Assets/20230129213637.png)
 
 ### Icons and Transforms
