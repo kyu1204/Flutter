@@ -167,6 +167,9 @@
 ### Code Actions
 1. Click Bulb or Input Command (Command + .)
 2. Choose awesome actions.
+	1. Extract Method
+	2. Extract Widget
+	3. Wrap Padding, Center, Container, etc
 ### [Reusable Widgets](Code/toonflix/lib/widgets/button.dart)
 1. If you want created custom widgets, define the class and inherit the core widget. 
    ```dart
