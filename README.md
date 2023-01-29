@@ -49,7 +49,7 @@
 2. `cd <app-name>`
 3. `code .` (open to vscode)
 4. We need focus on the `lib/main.dart` file.
-### Hello World
+### [Hello World](Code/toonflix/lib/main.dart)
 1. The **runApp()** in the **main** function is the starting point for the application.
 2. The **runApp()** receives **Widget** type parameters.
 3. The Flutter are all made it **Widgets**.
@@ -68,7 +68,43 @@
    ```
 5. You need to return the main **Widget**, but there are two main apps provided by Flutter.
 	1. MaterialApp (Google style)  **`recommend`**
-	   1. CupertinoApp (Apple style)
-   6. df
-      ```
-    ```
+	2. CupertinoApp (Apple style)
+   ```dart
+   class App extends StatelessWidget{
+       @override
+       Widget build(BuildContext context) {
+           return MaterialApp();
+       }
+   }
+   ```
+6. We need focus on the `home` parameter.
+7. The `home` parameter need to **`Scaffold`**
+   ```dart
+   class App extends StatelessWidget{
+       @override
+       Widget build(BuildContext context) {
+           return MaterialApp(
+               home: Scaffold(),
+           );
+       }
+   }
+   ```
+8. Then fill in the required parameters one by one.
+   ```dart
+   class App extends StatelessWidget{
+       @override
+       Widget build(BuildContext context) {
+           return MaterialApp(
+               home: Scaffold(
+                   appBar: AppBar(
+                       title: Text("Hello Flutter"),
+                   ),  // AppBar
+                   body: Center(
+                       child: Text("Hello World!"),
+                   ),  // Center
+               ),  // Scaffold
+           );  // MaterialApp
+       }
+   }
+   ```
+![[Pasted image 20230129165125.png]]
