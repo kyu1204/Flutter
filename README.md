@@ -36,3 +36,4 @@
 1. `arch -arm64 brew install --cask android-studio`
 2. follow guide
    > https://docs.flutter.dev/get-started/install/macos#android-setup
+3. If ``
