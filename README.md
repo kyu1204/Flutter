@@ -41,3 +41,10 @@
 #### Portable
 1. join https://dartpad.dev 
 2. choice the samples.
+#### vscode
+1. install `Dart` extension
+2. install `Flutter` extension
+### How to Start?
+1. `flutter create <app-name>`
+2. `cd <app-name>`
+3. `code .` (open to vscode)
