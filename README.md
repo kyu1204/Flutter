@@ -165,4 +165,5 @@
    "dart.previewFlutterUiGuides": true,
    ```
 ### Code Actions
-1. Click Bulb.
+1. Click Bulb or Input Command (Command + .)
+2. Choose awesome actions.
