@@ -52,4 +52,23 @@
 ### Hello World
 1. The **runApp()** in the **main** function is the starting point for the application.
 2. The **runApp()** receives **Widget** type parameters.
-3. Flutter is build in the 
+3. The Flutter are all made it **Widgets**.
+4. To convert the class we created into a **Widget**, we need to **inherit the core Widget**.
+   ```dart
+   void main() {
+       runApp(App());
+   }
+   
+   // abstract class
+   class App extends StatelessWidget{
+       @override
+       Widget build(BuildContext context) {
+       }
+   }
+   ```
+5. You need to return the main **Widget**, but there are two main apps provided by Flutter.
+	1. MaterialApp (Google style)  **`recommend`**
+	   1. CupertinoApp (Apple style)
+   6. df
+      ```
+    ```
