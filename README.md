@@ -322,6 +322,6 @@ class CurrencyCard extends StatelessWidget {
 }
 ```
 
-![Reusable Cards](20230129231237.png)
+![Reusable Cards](/Assets/20230129231237.png)
 
 ---
