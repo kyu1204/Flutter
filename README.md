@@ -38,3 +38,6 @@
    > https://docs.flutter.dev/get-started/install/macos#android-setup
 3. If an `Unable to find bundled Java version.` error, follow this guide
    > https://github.com/flutter/flutter/issues/118502#issuecomment-1383215722
+#### Portable
+1. join https://dartpad.dev 
+2. choice the samples.
