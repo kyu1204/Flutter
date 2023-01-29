@@ -20,8 +20,10 @@ class CurrencyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var dy = order * -20.0;
+
     return Transform.translate(
-      offset: const Offset(0, double(order * -20)),
+      offset: Offset(0, dy),
       child: Container(
         clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
