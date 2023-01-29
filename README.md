@@ -44,7 +44,12 @@
 #### vscode
 1. install `Dart` extension
 2. install `Flutter` extension
-### How to Start?
+### Running Flutter
 1. `flutter create <app-name>`
 2. `cd <app-name>`
 3. `code .` (open to vscode)
+4. We need focus on the `lib/main.dart` file.
+### Hello World
+1. The **runApp()** in the **main** function is the starting point for the application.
+2. The **runApp()** receives **Widget** type parameters.
+3. Flutter is build in the 
