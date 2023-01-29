@@ -165,3 +165,4 @@
    "dart.previewFlutterUiGuides": true,
    ```
 ### Code Actions
+1. Click Bulb.
