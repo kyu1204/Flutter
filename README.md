@@ -354,7 +354,7 @@ class CurrencyCard extends StatelessWidget {
 
 ![BuildContext](/Assets/20230130203602.png)
 
-### Widget Lifecycle
+### [Widget Lifecycle](Code/state/lib/main.dart)
 1. There are 2 things to remember about the life cycle of Stateful Widgets.
 	1. initState()
 		1. It is called only once when the widget is inserted into the tree for the first time. This method is an opportunity for the widget to initialize itself, such as by setting up any data or resources it needs.
