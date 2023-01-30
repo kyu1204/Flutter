@@ -330,10 +330,10 @@ class CurrencyCard extends StatelessWidget {
 1. **Stateful Widgets** is that if a data changes, the UI changes in real time.
 2. **State** is a simple **dart property**.
 ### [setState](Code/state/lib/main.dart)
-	1. If you change state, you must call setState().
-	2. setState() refreshes the UI.
-	3. It is not necessary to put the code that changes the data into setState().
-	4. However, it is recommanded insert the code as setState(), because it looks better.
+1. If you change state, you must call setState().
+2. setState() refreshes the UI.
+3. It is not necessary to put the code that changes the data into setState().
+4. However, it is recommanded insert the code as setState(), because it looks better.
 
 ![setState](/Assets/20230130195436.png)
 
