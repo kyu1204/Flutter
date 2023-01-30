@@ -46,11 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  String format(int seconds) {
-    var duration = Duration(seconds: seconds);
-    print(duration);
-    return "$seconds";
-  }
+  String format(int seconds) =>
+      Duration(seconds: seconds).toString().split(".").first.substring(2, 7);
 
   @override
   Widget build(BuildContext context) {
@@ -75,15 +72,30 @@ class _HomeScreenState extends State<HomeScreen> {
           Flexible(
             flex: 3,
             child: Center(
-              child: IconButton(
-                onPressed: isRunning ? onPausePressed : onStartPressed,
-                color: Theme.of(context).cardColor,
-                iconSize: 120,
-                icon: Icon(
-                  isRunning
-                      ? Icons.pause_circle_outline
-                      : Icons.play_circle_outline,
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: isRunning ? onPausePressed : onStartPressed,
+                    color: Theme.of(context).cardColor,
+                    iconSize: 120,
+                    icon: Icon(
+                      isRunning
+                          ? Icons.pause_circle_outline
+                          : Icons.play_circle_outline,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: isRunning ? onPausePressed : onStartPressed,
+                    color: Theme.of(context).cardColor,
+                    iconSize: 50,
+                    icon: Icon(
+                      isRunning
+                          ? Icons.pause_circle_outline
+                          : Icons.play_circle_outline,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
