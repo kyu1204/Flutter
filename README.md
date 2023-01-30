@@ -408,3 +408,12 @@ class _MyWidgetState extends State<MyWidget> {
 ![User Interface](/Assets/20230130224230.png)
 
 ### Timer
+1. Timer
+	1. dart standard function
+	2. Timer.periodic
+		1. Runs the specified function during the set duration.
+		2. Duration(seconds: 1)
+
+![Timer](20230130225216.png)
+
+### Pause Play
