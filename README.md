@@ -9,7 +9,7 @@
 		2. [BMW](https://flutter.dev/showcase/bmw)
 		3. [Wondrous](https://apps.apple.com/us/app/wonderous/id1612491897)
 		4. [etc](https://flutter.dev/showcase)
-	2. 웹
+	2. Web
 		1. [Google I/O Photo Booth](https://photobooth.flutter.dev/#/)
 		2. [Flutter Plasma](https://flutterplasma.dev/)
 		3. [Flutter Pinball](https://pinball.flutter.dev/#/)
@@ -394,4 +394,17 @@ class _MyWidgetState extends State<MyWidget> {
 ![Widgets Lifecycle](/Assets/20230130210510.png)
 
 ---
-## 
+## Pomodoro App
+### User Interface
+1. ThemeData
+	1. colorScheme: ColorScheme (backgroundColor is deprecated)
+		1. backgroundColor
+	2. textTheme: TextTheme
+		1. displayLarge (headline1 is deprecated)
+	3. cardColor
+2. Flexible
+	1. It takes in a flex argument that determines the proportion of space the widget should take up compared. Flexible widgets allow for more precise control over the layout of your app.
+
+![User Interface](/Assets/20230130224230.png)
+
+### Timer
