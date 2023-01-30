@@ -420,6 +420,9 @@ class _MyWidgetState extends State<MyWidget> {
 1. created **`isRunning`** property
 2. created **`onPausePressed()`**
 3. set QQ **`isRunning`** to **`Icon`** and **`method`** on the **`IconButton`**
+```dart
+
+```
 
 ![Pause Play](/Assets/timer-pause.gif)
 
