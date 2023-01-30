@@ -48,6 +48,7 @@ class MyLargeTitle extends StatelessWidget {
       'My Large Title',
       style: TextStyle(
         fontSize: 30,
+        color: Theme.of(context).textTheme.titleLarge!.color,
       ),
     );
   }
