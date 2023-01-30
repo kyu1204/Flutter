@@ -414,6 +414,6 @@ class _MyWidgetState extends State<MyWidget> {
 		1. Runs the specified function during the set duration.
 		2. Duration(seconds: 1)
 
-![Timer](20230130225216.png)
+![Timer](timer.gif)
 
 ### Pause Play
