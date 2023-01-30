@@ -359,5 +359,39 @@ class CurrencyCard extends StatelessWidget {
 	1. initState()
 		1. It is called only once when the widget is inserted into the tree for the first time. This method is an opportunity for the widget to initialize itself, such as by setting up any data or resources it needs.
 		2. The `initState` method is called before the `build` method and is typically used to perform one-time setup tasks, such as allocating resources, initializing variables, or connecting to APIs. It is important to keep the `initState` method lightweight, as it can negatively impact the performance of your app if it takes too long to run.
-		   
-	1. df
+	2. dispose()
+		1. It is called when the widget is removed from the tree permanently and is used to clean up any resources that were allocated by the widget. This method is called just before the widget is destroyed.
+		2. It is important to correctly clean up resources in the `dispose` method to avoid memory leaks and improve the performance of your app. For example, if you opened a network connection or an audio player in the widget, you should close it in the `dispose` method.
+```dart
+class MyWidget extends StatefulWidget {
+  @override
+  _MyWidgetState createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  StreamSubscription _subscription;
+
+  @override
+  void initState() {
+    super.initState();
+    _subscription = Stream.periodic(Duration(seconds: 1))
+        .listen((data) => print('Data: $data'));
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _subscription.cancel();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Text('Stream subscription is running');
+  }
+}
+```
+
+![Widgets Lifecycle](/Assets/20230130210510.png)
+
+---
+## 
