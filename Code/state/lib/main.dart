@@ -12,6 +12,14 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  // int counter = 0;
+
+  // void onClicked() {
+  //   setState(() {
+  //     counter = counter + 1;
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,6 +37,17 @@ class _AppState extends State<App> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               MyLargeTitle(),
+              // Text(
+              //   "$counter",
+              //   style: const TextStyle(
+              //     fontSize: 40,
+              //   ),
+              // ),
+              // IconButton(
+              //   onPressed: onClicked,
+              //   iconSize: 40,
+              //   icon: const Icon(Icons.add_box_rounded),
+              // )
             ],
           ),
         ),
@@ -37,18 +56,29 @@ class _AppState extends State<App> {
   }
 }
 
-class MyLargeTitle extends StatelessWidget {
+class MyLargeTitle extends StatefulWidget {
   const MyLargeTitle({
     super.key,
   });
 
   @override
+  State<MyLargeTitle> createState() => _MyLargeTitleState();
+}
+
+class _MyLargeTitleState extends State<MyLargeTitle> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       'My Large Title',
       style: TextStyle(
         fontSize: 30,
-        color: Theme.of(context).textTheme.titleLarge!.color,
+        color: Theme.of(context).textTheme.titleLarge?.color,
       ),
     );
   }

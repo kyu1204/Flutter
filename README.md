@@ -337,4 +337,21 @@ class CurrencyCard extends StatelessWidget {
 
 ![setState](/Assets/20230130195436.png)
 
-### BuildContext
+### [BuildContext](Code/state/lib/main.dart)
+1. It provides information about the location of a widget in the widget tree and is used to retrieve the nearest ancestor state and other resources.
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Text(
+      'My Large Title',
+      style: TextStyle(
+        fontSize: 30,
+        color: Theme.of(context).textTheme.titleLarge?.color,
+      ),
+    );
+  }
+```
+
+![BuildContext](/Assets/20230130203602.png)
+
+### Widget Lifecycle
