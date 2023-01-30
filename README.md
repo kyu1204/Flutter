@@ -413,6 +413,21 @@ class _MyWidgetState extends State<MyWidget> {
 	2. Timer.periodic
 		1. Runs the specified function during the set duration.
 		2. Duration(seconds: 1)
+```dart
+class _HomeScreenState extends State<HomeScreen> {
+  int totalSeconds = 1500;
+  late Timer timer;
+
+  void onTick(Timer timer) {
+    setState(() {
+      totalSeconds = totalSeconds - 1;
+    });
+  }
+
+  void onStartPressed() {
+    timer = Timer.periodic(const Duration(seconds: 1), onTick);
+  }
+```
 
 ![Timer](timer.gif)
 
@@ -421,7 +436,55 @@ class _MyWidgetState extends State<MyWidget> {
 2. created **`onPausePressed()`**
 3. set QQ **`isRunning`** to **`Icon`** and **`method`** on the **`IconButton`**
 ```dart
+class _HomeScreenState extends State<HomeScreen> {
+  int totalSeconds = 1500;
+  bool isRunning = false;
+  late Timer timer;
 
+  void onTick(Timer timer) {
+    setState(() {
+      totalSeconds = totalSeconds - 1;
+    });
+  }
+
+  void onStartPressed() {
+    timer = Timer.periodic(const Duration(seconds: 1), onTick);
+    setState(() {
+      isRunning = true;
+    });
+  }
+
+  void onPausePressed() {
+    timer.cancel();
+    setState(() {
+      isRunning = false;
+    });
+    
+    @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      ...
+          Flexible(
+            flex: 3,
+            child: Center(
+              child: IconButton(
+                // set isRunning
+                onPressed: isRunning ? onPausePressed : onStartPressed,
+                color: Theme.of(context).cardColor,
+                iconSize: 120,
+                icon: Icon(
+                  // set isRunning
+                  isRunning
+                      ? Icons.pause_circle_outline
+                      : Icons.play_circle_outline,
+                ),
+              ),
+            ),
+          ),
+     ...
+  }
+    
+  }
 ```
 
 ![Pause Play](/Assets/timer-pause.gif)
