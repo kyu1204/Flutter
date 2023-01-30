@@ -489,4 +489,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
 ![Pause Play](/Assets/timer-pause.gif)
 
-### Date Format
+### [Date Format](Code/pomodoro/lib/screens/home_screen.dart)
+1. use Duration
+	1. `00:24:59.000000`
+2. Split String
+```dart
+String format(int seconds) =>
+      Duration(seconds: seconds).toString().split(".").first.substring(2, 7);
+```
+---
