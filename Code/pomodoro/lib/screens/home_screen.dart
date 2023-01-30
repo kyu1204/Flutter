@@ -71,32 +71,27 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Flexible(
             flex: 3,
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: isRunning ? onPausePressed : onStartPressed,
+                  color: Theme.of(context).cardColor,
+                  iconSize: 120,
+                  icon: Icon(
+                    isRunning
+                        ? Icons.pause_circle_outline
+                        : Icons.play_circle_outline,
+                  ),
+                ),
+                if (isRunning)
                   IconButton(
                     onPressed: isRunning ? onPausePressed : onStartPressed,
                     color: Theme.of(context).cardColor,
-                    iconSize: 120,
-                    icon: Icon(
-                      isRunning
-                          ? Icons.pause_circle_outline
-                          : Icons.play_circle_outline,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: isRunning ? onPausePressed : onStartPressed,
-                    color: Theme.of(context).cardColor,
-                    iconSize: 50,
-                    icon: Icon(
-                      isRunning
-                          ? Icons.pause_circle_outline
-                          : Icons.play_circle_outline,
-                    ),
-                  ),
-                ],
-              ),
+                    iconSize: 30,
+                    icon: const Icon(Icons.refresh_outlined),
+                  )
+              ],
             ),
           ),
           Flexible(
