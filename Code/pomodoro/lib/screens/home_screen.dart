@@ -10,7 +10,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int totalSeconds = 1500;
+  static const twentyFiveMinutes = 1500;
+  int totalSeconds = twentyFiveMinutes;
   bool isRunning = false;
   int totalPomotoros = 0;
 
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (totalSeconds == 0) {
       setState(() {
         totalPomotoros = totalPomotoros + 1;
-        totalSeconds = 1500;
+        totalSeconds = twentyFiveMinutes;
         isRunning = false;
       });
       timer.cancel();
@@ -45,6 +46,12 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  String format(int seconds) {
+    var duration = Duration(seconds: seconds);
+    print(duration);
+    return "$seconds";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Container(
               alignment: Alignment.bottomCenter,
               child: Text(
-                "$totalSeconds",
+                format(totalSeconds),
                 style: TextStyle(
                   color: Theme.of(context).cardColor,
                   fontSize: 89,
