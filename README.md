@@ -325,3 +325,7 @@ class CurrencyCard extends StatelessWidget {
 ![Reusable Cards](/Assets/20230129231237.png)
 
 ---
+## Stateful Widgets
+### [State](Code/state/lib/main.dart)
+1. **Stateful Widgets** is that if a data changes, the UI changes in real time.
+2. State is 
