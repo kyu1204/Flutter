@@ -417,3 +417,5 @@ class _MyWidgetState extends State<MyWidget> {
 ![Timer](timer.gif)
 
 ### Pause Play
+1. created isRunning property
+2. created onPausePressed()
