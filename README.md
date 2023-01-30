@@ -355,3 +355,9 @@ class CurrencyCard extends StatelessWidget {
 ![BuildContext](/Assets/20230130203602.png)
 
 ### Widget Lifecycle
+1. There are 2 things to remember about the life cycle of Stateful Widgets.
+	1. initState()
+		1. It is called only once when the widget is inserted into the tree for the first time. This method is an opportunity for the widget to initialize itself, such as by setting up any data or resources it needs.
+		2. The `initState` method is called before the `build` method and is typically used to perform one-time setup tasks, such as allocating resources, initializing variables, or connecting to APIs. It is important to keep the `initState` method lightweight, as it can negatively impact the performance of your app if it takes too long to run.
+		   
+	1. df

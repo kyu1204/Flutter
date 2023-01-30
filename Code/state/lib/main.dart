@@ -20,6 +20,14 @@ class _AppState extends State<App> {
   //   });
   // }
 
+  bool showTitle = true;
+
+  void titleToggle() {
+    setState(() {
+      showTitle = !showTitle;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,8 +43,12 @@ class _AppState extends State<App> {
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              MyLargeTitle(),
+            children: [
+              showTitle ? const MyLargeTitle() : const Text("noting"),
+              IconButton(
+                onPressed: titleToggle,
+                icon: const Icon(Icons.remove_red_eye),
+              )
               // Text(
               //   "$counter",
               //   style: const TextStyle(
