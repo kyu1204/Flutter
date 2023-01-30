@@ -395,7 +395,7 @@ class _MyWidgetState extends State<MyWidget> {
 
 ---
 ## Pomodoro App
-### User Interface
+### [User Interface](Code/pomodoro/lib/screens/home_screen.dart)
 1. ThemeData
 	1. colorScheme: ColorScheme (backgroundColor is deprecated)
 		1. backgroundColor
@@ -407,7 +407,7 @@ class _MyWidgetState extends State<MyWidget> {
 
 ![User Interface](/Assets/20230130224230.png)
 
-### Timer
+### [Timer](Code/pomodoro/lib/screens/home_screen.dart)
 1. Timer
 	1. dart standard function
 	2. Timer.periodic
@@ -416,6 +416,11 @@ class _MyWidgetState extends State<MyWidget> {
 
 ![Timer](timer.gif)
 
-### Pause Play
-1. created isRunning property
-2. created onPausePressed()
+### [Pause Play](Code/pomodoro/lib/screens/home_screen.dart)
+1. created **`isRunning`** property
+2. created **`onPausePressed()`**
+3. set QQ **`isRunning`** to **`Icon`** and **`method`** on the **`IconButton`**
+
+![Pause Play](/Assets/timer-pause.gif)
+
+### Date Format
