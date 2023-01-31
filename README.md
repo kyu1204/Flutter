@@ -520,9 +520,11 @@ String format(int seconds) =>
 3. use **`get()`** method
 	1. **`get()`** method is asynchronous.
 	2. use **`async`** and **`await`** keyword.
-### fromJson
+### [fromJson](Code/webtoon/lib/services/api_service.dart)
 1. use jsonDecode
 	1. jsonDecode return type is dynamic
 	2. This api response data type is `List`, so jsonDecode return type is `List<dynamic>`
 2. create a **`WebtoonModel`**
-3. 
+	1. create a **Named Constructor** named **`fromJson`**
+3. initialize to WebtoonModel using json data
+4. return WebtoonModel List
