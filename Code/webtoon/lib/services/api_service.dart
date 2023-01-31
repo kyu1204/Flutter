@@ -1,20 +1,23 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:webtoon/models/webtoon_model.dart';
 
 class APIService {
   final String baseUrl = "https://webtoon-crawler.nomadcoders.workers.dev";
   final String toay = "today";
 
-  void getTodaysToons() async {
+  Future<List<WebtoonModel>> getTodaysToons() async {
+    List<WebtoonModel> webtoonInstances = [];
     final url = Uri.parse('$baseUrl/$toay');
     final resposne = await http.get(url);
+
     if (resposne.statusCode == 200) {
       final List<dynamic> webtoons = jsonDecode(resposne.body);
       for (var webtoon in webtoons) {
-        print(webtoon);
+        webtoonInstances.add(WebtoonModel.fromJson(webtoon));
       }
-      return;
+      return webtoonInstances;
     }
     throw Error();
   }

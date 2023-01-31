@@ -521,3 +521,8 @@ String format(int seconds) =>
 	1. **`get()`** method is asynchronous.
 	2. use **`async`** and **`await`** keyword.
 ### fromJson
+1. use jsonDecode
+	1. jsonDecode return type is dynamic
+	2. This api response data type is `List`, so jsonDecode return type is `List<dynamic>`
+2. create a **`WebtoonModel`**
+3. 
