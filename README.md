@@ -530,3 +530,27 @@ String format(int seconds) =>
 4. return WebtoonModel List
 5. If the function is asynchronous, the return type is **Future**.
 	1. In this case, the return type is **`Futre<List<WebtoonModel>>`**.
+### waitForWebToons
+```dart
+class _HomeScreenState extends State<HomeScreen> {
+  List<WebtoonModel> webtoons = [];
+  bool isLoading = true;
+
+  void waitForWebToons() async {
+    webtoons = await APIService.getTodaysToons();
+    isLoading = false;
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    waitForWebToons();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print(webtoons);
+    print(isLoading);
+```
+### FutureBuilder
