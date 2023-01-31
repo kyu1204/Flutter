@@ -708,3 +708,12 @@ return GestureDetector(
 ![navigator](/Assets/navigator.gif)
 
 ### Hero
+1. The `Hero` widget in Flutter is a widget that allows you to create visually spectacular animations between routes (screens/pages). 
+2. It is typically used to create smooth animations between different UI elements such as images, text, and even entire pages. 
+3. The `Hero` widget works by animating the shared elements between two routes as they transition from one to another. 
+4. To use the `Hero` widget, you need to wrap the shared element with a `Hero` widget in both routes and give it a unique tag. 
+5. The animation between the routes will then happen automatically.
+
+![Hero](/Assets/hero.gif)
+
+###
