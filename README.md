@@ -648,7 +648,63 @@ class HomeScreen extends StatelessWidget {
   }
 }
 ```
-### ListView Recap
-1. dsfaf
-### Detail Screen
-1. dsfafd
+### [ListView Recap](Code/webtoon/lib/widgets/webtoon_widget.dart)
+1. Image.network()
+2. BoxDecoration
+	1. BoxShadow
+```dart
+child: Column(
+        children: [
+          Container(
+            clipBehavior: Clip.hardEdge,
+            width: 250,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 15,
+                  offset: const Offset(10, 10),
+                  color: Colors.black.withOpacity(0.5),
+                )
+              ],
+            ),
+            child: Image.network(thumb),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 22,
+            ),
+          ),
+        ],
+```
+
+![ListView](/Assets/20230131234152.png)
+
+### [Detail Screen](Code/webtoon/lib/widgets/webtoon_widget.dart)
+1. GestureDetector
+	1. onTap
+2. Navigator.push
+	1. MaterialPageRoute
+```dart
+return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(
+              title: title,
+              thumb: thumb,
+              id: id,
+            ),
+          ),
+        );
+      },
+```
+
+![navigator](/Assets/navigator.gif)
+
+### Hero
