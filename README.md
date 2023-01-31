@@ -554,3 +554,42 @@ class _HomeScreenState extends State<HomeScreen> {
     print(isLoading);
 ```
 ### FutureBuilder
+1. It is a takes a `Future` object and builds widgets based on the future's result. 
+2. It has two builder functions: one for handling the future's result when it is available, and one for building a widget if the future is still in progress. 
+3. The `FutureBuilder` widget automatically updates its child widget whenever the future finishes.
+```dart
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
+
+  Future<List<WebtoonModel>> webtoons = APIService.getTodaysToons();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 2,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.green,
+        title: const Text(
+          "오늘의 웹툰",
+          style: TextStyle(
+            fontSize: 24,
+          ),
+        ),
+      ),
+      body: FutureBuilder(
+        future: webtoons,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return const Text("There is data!");
+          } else {
+            return const Text("Loading...");
+          }
+        },
+      ),
+    );
+  }
+}
+```
+### ListView
