@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:webtoon/models/webtoon_detail_model.dart';
+import 'package:webtoon/models/webtoon_episode_model.dart';
 import 'package:webtoon/models/webtoon_model.dart';
 
 class APIService {
@@ -31,6 +32,21 @@ class APIService {
     if (response.statusCode == 200) {
       var webtoon = jsonDecode(response.body);
       return WebtoonDetailModel.fromJson(webtoon);
+    }
+    throw Error();
+  }
+
+  static Future<List<WebtoonEpisodeModel>> getToonEpisodeById(String id) async {
+    List<WebtoonEpisodeModel> episodeInstances = [];
+    final url = Uri.parse("$baseUrl/$id/episodes");
+    final resposne = await http.get(url);
+
+    if (resposne.statusCode == 200) {
+      final webtoons = jsonDecode(resposne.body);
+      for (var webtoon in webtoons) {
+        episodeInstances.add(WebtoonEpisodeModel.fromJson(webtoon));
+      }
+      return episodeInstances;
     }
     throw Error();
   }
