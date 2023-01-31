@@ -511,10 +511,13 @@ String format(int seconds) =>
 		2. backgroundColor: Colors.white
 		3. foregroundColor: Colors.green
 		4. title: Text
-### Data Fetching
+### [Data Fetching](Code/webtoon/lib/services/api_service.dart)
 1. install **http** library
 	1. https://pub.dev
 2. write **`pubspec.yaml`**
 	1. It is project setting file.
 	2. supports add image, font etc
-3. 
+3. use **`get()`** method
+	1. **`get()`** method is asynchronous.
+	2. use **`async`** and **`await`** keyword.
+### fromJson
