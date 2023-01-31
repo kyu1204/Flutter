@@ -716,4 +716,33 @@ return GestureDetector(
 
 ![Hero](/Assets/hero.gif)
 
-###
+### APIService
+```dart
+static Future<WebtoonDetailModel> getToonById(String id) async {
+    final url = Uri.parse("$baseUrl/$id");
+    final response = await http.get(url);
+
+    if (response.statusCode == 200) {
+      var webtoon = jsonDecode(response.body);
+      return WebtoonDetailModel.fromJson(webtoon);
+    }
+    throw Error();
+  }
+
+  static Future<List<WebtoonEpisodeModel>> getToonEpisodeById(String id) async {
+    List<WebtoonEpisodeModel> episodeInstances = [];
+    final url = Uri.parse("$baseUrl/$id/episodes");
+    final resposne = await http.get(url);
+
+    if (resposne.statusCode == 200) {
+      final webtoons = jsonDecode(resposne.body);
+      for (var webtoon in webtoons) {
+        episodeInstances.add(WebtoonEpisodeModel.fromJson(webtoon));
+      }
+      return episodeInstances;
+    }
+    throw Error();
+  }
+```
+
+### Futures
