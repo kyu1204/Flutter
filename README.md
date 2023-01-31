@@ -592,7 +592,60 @@ class HomeScreen extends StatelessWidget {
   }
 }
 ```
-### ListView
+### [ListView](Code/webtoon/lib/screens/home_screen.dart)
 1. ListView is a widget in Flutter that allows creating scrolling list of widgets. 
-5. **ListView.builder**
-	1. ListView.builder is a widget in Flutter that is used to build a scrolling list of widgets. It uses an efficient builder pattern and creates items lazily, so the list can be infinitely long. The builder function is called with index and generates a widget for each item in the list.
+2. **ListView.builder**
+	1. It uses an efficient builder pattern and creates items lazily, so the list can be infinitely long. 
+	2. The builder function is called with index and generates a widget for each item in the list.
+3. **ListView.separated**
+	1. It is used to build a scrolling list of widgets with separator widgets between them. 
+	2. The separators can be any widget, and the list items can be generated with a builder function that takes an index. 
+	3. The builder function is called with index and generates a widget for each item in the list. 
+	4. This widget is useful when you want to display a list of items with separators between them.
+```dart
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
+
+  final Future<List<WebtoonModel>> webtoons = APIService.getTodaysToons();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 2,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.green,
+        title: const Text(
+          "오늘의 웹툰",
+          style: TextStyle(
+            fontSize: 24,
+          ),
+        ),
+      ),
+      body: FutureBuilder(
+        future: webtoons,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemCount: snapshot.data!.length,
+              itemBuilder: (context, index) {
+                var webtoon = snapshot.data![index];
+                return Text(webtoon.title);
+              },
+              separatorBuilder: (context, index) => const SizedBox(
+                width: 20,
+              ),
+            );
+          }
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        },
+      ),
+    );
+  }
+}
+
+```
