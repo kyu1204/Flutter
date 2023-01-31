@@ -528,3 +528,5 @@ String format(int seconds) =>
 	1. create a **Named Constructor** named **`fromJson`**
 3. initialize to WebtoonModel using json data
 4. return WebtoonModel List
+5. If the function is asynchronous, the return type is **Future**.
+	1. In this case, the return type is **`Futre<List<WebtoonModel>>`**.
