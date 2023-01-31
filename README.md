@@ -593,3 +593,6 @@ class HomeScreen extends StatelessWidget {
 }
 ```
 ### ListView
+1. ListView is a widget in Flutter that allows creating scrolling list of widgets. 
+5. **ListView.builder**
+	1. ListView.builder is a widget in Flutter that is used to build a scrolling list of widgets. It uses an efficient builder pattern and creates items lazily, so the list can be infinitely long. The builder function is called with index and generates a widget for each item in the list.
