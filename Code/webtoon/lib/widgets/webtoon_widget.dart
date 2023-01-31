@@ -41,7 +41,17 @@ class Webtoon extends StatelessWidget {
                 )
               ],
             ),
-            child: Image.network(thumb),
+            child: Image.network(
+              thumb,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) {
+                  return child;
+                }
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+            ),
           ),
           const SizedBox(
             height: 10,
