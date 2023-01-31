@@ -502,4 +502,19 @@ String format(int seconds) =>
 ### Introduction
 1. [Naver Webtoon Unofficial App](https://webtoon-crawler.nomadcoders.workers.dev/)
 	1. only for educational purposes.
-### AppBar
+### [AppBar](Code/webtoon/lib/screens/home_screen.dart)
+1. Scaffold
+	1. backgroundColor: Colors.white
+	2. appBar: AppBar
+		1. elevation
+			1. It is shadow for widgets
+		2. backgroundColor: Colors.white
+		3. foregroundColor: Colors.green
+		4. title: Text
+### Data Fetching
+1. install **http** library
+	1. https://pub.dev
+2. write **`pubspec.yaml`**
+	1. It is project setting file.
+	2. supports add image, font etc
+3. 
