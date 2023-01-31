@@ -648,4 +648,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 ```
-### 
+### ListView Recap
+1. dsfaf
+### Detail Screen
+1. dsfafd

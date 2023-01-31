@@ -1,11 +1,30 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({super.key});
+  final String title, thumb, id;
+
+  const DetailScreen({
+    super.key,
+    required this.title,
+    required this.thumb,
+    required this.id,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 2,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.green,
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontSize: 24,
+          ),
+        ),
+      ),
+    );
   }
 }
