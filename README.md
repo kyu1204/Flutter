@@ -744,5 +744,33 @@ static Future<WebtoonDetailModel> getToonById(String id) async {
     throw Error();
   }
 ```
-
 ### Futures
+```dart
+class _DetailScreenState extends State<DetailScreen> {
+  late Future<WebtoonDetailModel> webtoon;
+  late Future<List<WebtoonEpisodeModel>> episodes;
+
+  @override
+  void initState() {
+    super.initState();
+    webtoon = APIService.getToonById(widget.id);
+    episodes = APIService.getLatestEpisodeById(widget.id);
+  }
+```
+### Detail Info
+1. FutureBuilder
+2. Column
+3. Container
+	1. border
+		1. Border
+			1. color
+			2. width
+	2. boxShadow
+	3. borderRadius
+
+![Detail Info](/Assets/20230201232104.png)
+
+### Episodes
+1. Extract Widgets
+	1. Episode
+2. Gesture
