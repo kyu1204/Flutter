@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webtoon/models/webtoon_detail_model.dart';
 import 'package:webtoon/models/webtoon_episode_model.dart';
 import 'package:webtoon/services/api_service.dart';
@@ -21,12 +22,18 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen> {
   late Future<WebtoonDetailModel> webtoon;
   late Future<List<WebtoonEpisodeModel>> episodes;
+  late SharedPreferences prefs;
+
+  Future initPrefs() async {
+    prefs = await SharedPreferences.getInstance();
+  }
 
   @override
   void initState() {
     super.initState();
     webtoon = APIService.getToonById(widget.id);
     episodes = APIService.getLatestEpisodeById(widget.id);
+    initPrefs();
   }
 
   @override
