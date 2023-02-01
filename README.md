@@ -760,7 +760,8 @@ class _DetailScreenState extends State<DetailScreen> {
 ### Detail Info
 1. FutureBuilder
 2. Column
-3. Container
+### Episodes
+1. Container
 	1. border
 		1. Border
 			1. color
@@ -770,7 +771,23 @@ class _DetailScreenState extends State<DetailScreen> {
 
 ![Detail Info](/Assets/20230201232104.png)
 
-### Episodes
-1. Extract Widgets
+### Url Launcher
+1. install to url_launcher
+	1. Web View Library
+2. add settings to info.plist
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>sms</string>
+  <string>tel</string>
+</array>
+```
+3. Extract to Widget
 	1. Episode
-2. Gesture
+		1. launchUrlString(url string)
+		2. GestureDetector
+			1. onTap
+
+![Url Launcher](/Assets/url_launcher.gif)
+
+### Favorites
