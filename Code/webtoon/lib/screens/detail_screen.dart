@@ -5,6 +5,8 @@ import 'package:webtoon/models/webtoon_episode_model.dart';
 import 'package:webtoon/services/api_service.dart';
 import 'package:webtoon/widgets/episode_widget.dart';
 
+const String likedToonsKey = "likedToons";
+
 class DetailScreen extends StatefulWidget {
   final String title, thumb, id;
 
@@ -25,14 +27,27 @@ class _DetailScreenState extends State<DetailScreen> {
   late SharedPreferences prefs;
   bool isLiked = false;
 
-  Future initPrefs() async {
+  initPrefs() async {
     prefs = await SharedPreferences.getInstance();
-    final likedToons = prefs.getStringList("likedToons");
+    final likedToons = prefs.getStringList(likedToonsKey);
 
     if (likedToons != null) {
       isLiked = likedToons.contains(widget.id);
     } else {
-      await prefs.setStringList('likedToons', []);
+      await prefs.setStringList(likedToonsKey, []);
+    }
+  }
+
+  onHartTap() async {
+    final likedToons = prefs.getStringList(likedToonsKey);
+    if (likedToons != null) {
+      if (isLiked) {
+        likedToons.remove(widget.id);
+      } else {
+        likedToons.add(widget.id);
+      }
+      await prefs.setStringList(likedToonsKey, likedToons);
+      setState(() {});
     }
   }
 
@@ -60,11 +75,9 @@ class _DetailScreenState extends State<DetailScreen> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: onHartTap,
             icon: Icon(
-              isLiked
-                  ? Icons.favorite_outlined
-                  : Icons.favorite_outline_outlined,
+              isLiked ? Icons.favorite : Icons.favorite_outline,
             ),
           )
         ],
