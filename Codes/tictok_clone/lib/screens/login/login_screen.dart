@@ -5,6 +5,10 @@ import 'package:tictok_clone/constants/sizes.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
+  void onSignUpTap(BuildContext context) {
+    Navigator.of(context).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,11 +48,14 @@ class LoginScreen extends StatelessWidget {
             children: [
               const Text("Don't have an account?"),
               Gaps.h5,
-              Text(
-                'Sign up',
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.w600,
+              GestureDetector(
+                onTap: () => onSignUpTap(context),
+                child: Text(
+                  'Sign up',
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ],
