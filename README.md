@@ -26,4 +26,5 @@
 2. If you want to follow the UI and widget of the host OS, use React Native.
 ---
 ## Notes
-
+* [Flutter Basic (Webtoon App)](/Notes/flutter_basic.md)
+* [Flutter TicTok Clone Coding](/Notes/flutter_tictok_clone_coding.md)
