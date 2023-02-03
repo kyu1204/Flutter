@@ -17,10 +17,7 @@ class AuthButton extends StatelessWidget {
     return FractionallySizedBox(
       widthFactor: 1,
       child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: Sizes.size10,
-          vertical: Sizes.size14,
-        ),
+        padding: const EdgeInsets.all(Sizes.size14),
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.grey.shade300,
@@ -28,16 +25,15 @@ class AuthButton extends StatelessWidget {
           ),
         ),
         child: Stack(
+          alignment: Alignment.center,
           children: [
-            icon,
-            Expanded(
-              child: Text(
-                text,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: Sizes.size16,
-                  fontWeight: FontWeight.w600,
-                ),
+            Align(alignment: Alignment.centerLeft, child: icon),
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: Sizes.size16,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ],
