@@ -30,4 +30,14 @@
 	1. SafeArea is a Flutter widget that helps ensure that important UI elements are not obscured by the notch, status bar, navigation bar, or any other system UI element on iOS devices. 
 	2. It adds padding to its child widget so that it is not obscured by these elements and remains visible on the screen. 
 	3. This is particularly useful in situations where the device's screen has a curved or irregular shape, or when the screen's size changes dynamically, such as when the device is rotated or when the keyboard is shown.
-2. bottomNavi
+2. bottomNavigationBar
+	1. BottomAppBar
+		1. The BottomAppBar is a Material Design widget in Flutter that is typically placed at the bottom of the screen and contains various UI elements such as navigation icons, action buttons, and a floating action button. 
+		2. It is a replacement for the traditional bottom navigation bar and can be used with Scaffold.bottomNavigationBar.
+### Login Screen
+1. Navigator.of(context).pop()
+	1. It is a method in Flutter's navigation framework that is used to close the current screen and return to the previous screen.
+### AuthButton
+1. Font Awesome
+	1. https://pub.dev/packages/font_awesome_flutter/install
+	2. 
