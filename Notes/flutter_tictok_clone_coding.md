@@ -40,4 +40,12 @@
 ### AuthButton
 1. Font Awesome
 	1. https://pub.dev/packages/font_awesome_flutter/install
-	2. 
+	2. FaIcon
+		1. FontAwesomeIcons
+2. FractionallySizedBox
+	1. It is sizes its child to a fraction of the total available space. 
+	2. It allows you to specify the height or width of the child as a fraction of the height or width of the parent.
+3. Stack
+	1. It is allows you to overlay multiple children widgets on top of each other.
+4. Align
+	1. It is aligns its child within itself and optionally scales the child to fit.
