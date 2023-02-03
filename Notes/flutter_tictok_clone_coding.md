@@ -49,3 +49,7 @@
 	1. It is allows you to overlay multiple children widgets on top of each other.
 4. Align
 	1. It is aligns its child within itself and optionally scales the child to fit.
+
+![auth](/Assets/auth.gif)
+
+### Sign Up Form
