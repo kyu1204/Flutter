@@ -74,13 +74,17 @@ class _UsernameScreenState extends State<UsernameScreen> {
             Gaps.v16,
             FractionallySizedBox(
               widthFactor: 1,
-              child: Container(
+              child: AnimatedContainer(
                 padding: const EdgeInsets.symmetric(
                   vertical: Sizes.size16,
                 ),
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
+                  borderRadius: BorderRadius.circular(Sizes.size5),
+                  color: _username.isEmpty
+                      ? Colors.grey.shade300
+                      : Theme.of(context).primaryColor,
                 ),
+                duration: const Duration(milliseconds: 90),
                 child: const Text(
                   "Next",
                   textAlign: TextAlign.center,
