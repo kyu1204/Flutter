@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
+import 'package:tictok_clone/features/authentication/widgets/form_button.dart';
 
 class UsernameScreen extends StatefulWidget {
   const UsernameScreen({super.key});
@@ -22,6 +23,12 @@ class _UsernameScreenState extends State<UsernameScreen> {
         _username = _usernameController.text;
       });
     });
+  }
+
+  @override
+  void dispose() {
+    _usernameController.dispose();
+    super.dispose();
   }
 
   @override
@@ -72,33 +79,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               ),
             ),
             Gaps.v16,
-            FractionallySizedBox(
-              widthFactor: 1,
-              child: AnimatedContainer(
-                padding: const EdgeInsets.symmetric(
-                  vertical: Sizes.size16,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Sizes.size5),
-                  color: _username.isEmpty
-                      ? Colors.grey.shade300
-                      : Theme.of(context).primaryColor,
-                ),
-                duration: const Duration(milliseconds: 500),
-                child: AnimatedDefaultTextStyle(
-                  duration: const Duration(milliseconds: 500),
-                  style: TextStyle(
-                    color:
-                        _username.isEmpty ? Colors.grey.shade400 : Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
-                  child: const Text(
-                    "Next",
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ),
-            )
+            FormButton(disabled: _username.isEmpty)
           ],
         ),
       ),
