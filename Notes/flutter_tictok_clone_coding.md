@@ -65,3 +65,20 @@
 
 ![sign up](/Assets/20230204175023.png)
 
+### Username Screen
+1. Textfield
+	1. TextField is a widget in Flutter that provides a text input field for accepting user input. 
+	2. cursorColor
+	3. decoration
+		1. InputDecoration
+			1. hintText
+			2. enabledBorder, focusedBorder
+				1. UnderlineInputBorder
+					1. borderSide
+						1. BorderSide
+							1. color
+	4. controller
+		1. TextEditingController
+			1. It is used to control the text input in a TextField widget. 
+			2. It acts as a bridge between the TextField and your code, providing a way for you to read and modify the text being entered by the user. 
+			3. With a TextEditingController, you can programmatically set the initial text value of a TextField, retrieve the current text value, and listen for changes to the text value. It can also be used to clear the text field, set the text selection, and control the selection cursor. The TextEditingController can be shared among multiple TextField widgets, making it useful for cases where you need to manipulate multiple text inputs in sync.
