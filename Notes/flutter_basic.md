@@ -791,3 +791,4 @@ class _DetailScreenState extends State<DetailScreen> {
 ![Url Launcher](/Assets/url_launcher.gif)
 
 ### Favorites
+1. SharedPreferences
