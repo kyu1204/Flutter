@@ -89,4 +89,10 @@
 	1. It is allows you to animate the properties of a container. 
 	2. By specifying a duration and a curve, you can create smooth transitions between different states of the container. 
 2. AnimatedDefaultTextStyle
-	1. 
+	1. It is allows you to animate the default text style of a widget tree. 
+	2. The text style is defined by a `TextStyle` object and can include properties such as font size, font weight, font family, color, and more. 
+	3. When the text style changes, AnimatedDefaultTextStyle smoothly transitions from the old text style to the new text style over a given duration and curve.
+
+![form button](/Assets/form_button.gif)
+
+### Email Screen
