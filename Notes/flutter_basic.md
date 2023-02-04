@@ -792,3 +792,9 @@ class _DetailScreenState extends State<DetailScreen> {
 
 ### Favorites
 1. SharedPreferences
+	1. SharedPreferences is a Flutter plugin that allows for persistent storage of key-value pairs on Android and iOS. 
+	2. It's a simple way to store small amounts of data such as user preferences, settings, and temporary cached data. 
+	3. The data is stored in an XML file on Android and in a plist file on iOS, and is saved to the device's local storage. 
+	4. The key-value pairs can be retrieved, updated, or deleted as needed, and the data will persist even if the app is closed or the device is restarted.
+
+![favorites](/Assets/favorites.gif)
