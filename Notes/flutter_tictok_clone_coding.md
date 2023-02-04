@@ -15,7 +15,7 @@
 1. Create a flutter project
 	1. `flutter create tictok_clone`
 2. Rename `MyApp()`
-### Constants
+### [Constants](Codes/tictok_clone/lib/constants/)
 1. Create constants
 	1.  sizes
 		1. const size data
@@ -25,7 +25,7 @@
 1. [TicTok Screen Shot](https://nomadcoders.co/downloads/tiktok.zip)
 ---
 ## Authentication
-### Sign Up Screen
+### [Sign Up Screen](Codes/tictok_clone/lib/features/authentication/sign_up_screen.dart)
 1. SafeAray
 	1. SafeArea is a Flutter widget that helps ensure that important UI elements are not obscured by the notch, status bar, navigation bar, or any other system UI element on iOS devices. 
 	2. It adds padding to its child widget so that it is not obscured by these elements and remains visible on the screen. 
@@ -34,10 +34,10 @@
 	1. BottomAppBar
 		1. The BottomAppBar is a Material Design widget in Flutter that is typically placed at the bottom of the screen and contains various UI elements such as navigation icons, action buttons, and a floating action button. 
 		2. It is a replacement for the traditional bottom navigation bar and can be used with Scaffold.bottomNavigationBar.
-### Login Screen
+### [Login Screen](Codes/tictok_clone/lib/features/authentication/login_screen.dart)
 1. Navigator.of(context).pop()
 	1. It is a method in Flutter's navigation framework that is used to close the current screen and return to the previous screen.
-### AuthButton
+### [AuthButton](Codes/tictok_clone/lib/features/authentication/widgets/auth_button.dart)
 1. Font Awesome
 	1. https://pub.dev/packages/font_awesome_flutter/install
 	2. FaIcon
@@ -52,7 +52,7 @@
 
 ![auth](/Assets/auth.gif)
 
-### Sign Up Form
+### [Sign Up Form](Codes/tictok_clone/lib/features/authentication/username_screen.dart)
 1. To set the default `Scaffold` theme, add to  **`ThemeData`**
 	1. scaffoldBackgroundColor
 	2. appBarTheme
@@ -65,7 +65,7 @@
 
 ![sign up](/Assets/20230204175023.png)
 
-### Username Screen
+### [Username Screen](Codes/tictok_clone/lib/features/authentication/username_screen.dart)
 1. Textfield
 	1. TextField is a widget in Flutter that provides a text input field for accepting user input. 
 	2. cursorColor
@@ -81,4 +81,7 @@
 		1. TextEditingController
 			1. It is used to control the text input in a TextField widget. 
 			2. It acts as a bridge between the TextField and your code, providing a way for you to read and modify the text being entered by the user. 
-			3. With a TextEditingController, you can programmatically set the initial text value of a TextField, retrieve the current text value, and listen for changes to the text value. It can also be used to clear the text field, set the text selection, and control the selection cursor. The TextEditingController can be shared among multiple TextField widgets, making it useful for cases where you need to manipulate multiple text inputs in sync.
+
+![username screen](/Assets/username_screen.gif)
+
+### FormButton
