@@ -53,3 +53,15 @@
 ![auth](/Assets/auth.gif)
 
 ### Sign Up Form
+1. To set the default `Scaffold` theme, add to  **`ThemeData`**
+	1. scaffoldBackgroundColor
+	2. appBarTheme
+		1. AppBarTheme
+			1. backgroundColor
+			2. foregroundColor
+			3. elevation
+			4. titleTextStyle
+				1. TextStyle
+
+![sign up](/Assets/20230204175023.png)
+
