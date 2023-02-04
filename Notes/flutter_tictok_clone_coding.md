@@ -85,3 +85,8 @@
 ![username screen](/Assets/username_screen.gif)
 
 ### FormButton
+1. AnimatedContainer
+	1. It is allows you to animate the properties of a container. 
+	2. By specifying a duration and a curve, you can create smooth transitions between different states of the container. 
+2. AnimatedDefaultTextStyle
+	1. 
