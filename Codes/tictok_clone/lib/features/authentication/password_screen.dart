@@ -14,7 +14,7 @@ class PasswordScreen extends StatefulWidget {
 class _PasswordScreenState extends State<PasswordScreen> {
   final TextEditingController _passwordController = TextEditingController();
   String _password = "";
-  final bool _obscureText = true;
+  bool _obscureText = true;
 
   @override
   void initState() {
@@ -62,6 +62,12 @@ class _PasswordScreenState extends State<PasswordScreen> {
     _passwordController.clear();
   }
 
+  void _toggleObscureText() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -105,10 +111,15 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         ),
                       ),
                       Gaps.h16,
-                      FaIcon(
-                        FontAwesomeIcons.eye,
-                        color: Colors.grey.shade500,
-                        size: Sizes.size20,
+                      GestureDetector(
+                        onTap: _toggleObscureText,
+                        child: FaIcon(
+                          _obscureText
+                              ? FontAwesomeIcons.eye
+                              : FontAwesomeIcons.eyeSlash,
+                          color: Colors.grey.shade500,
+                          size: Sizes.size20,
+                        ),
                       ),
                     ],
                   ),
