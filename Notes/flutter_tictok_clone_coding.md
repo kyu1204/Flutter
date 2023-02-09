@@ -110,3 +110,11 @@
 ![email screen](/Assets/email_screen.gif)
 
 ### Password Screen
+1. Controller.clear()
+2. TextField
+	1. decoration
+		1. InputDecoration
+			1. suffix
+3. Row
+	1. mainAxisSize
+		1. MainAxisSize.min
