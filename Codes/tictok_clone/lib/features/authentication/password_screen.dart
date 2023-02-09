@@ -14,6 +14,7 @@ class PasswordScreen extends StatefulWidget {
 class _PasswordScreenState extends State<PasswordScreen> {
   final TextEditingController _passwordController = TextEditingController();
   String _password = "";
+  final bool _obscureText = true;
 
   @override
   void initState() {
@@ -57,6 +58,10 @@ class _PasswordScreenState extends State<PasswordScreen> {
     );
   }
 
+  void _onClearTap() {
+    _passwordController.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -84,18 +89,27 @@ class _PasswordScreenState extends State<PasswordScreen> {
               TextField(
                 controller: _passwordController,
                 cursorColor: Theme.of(context).primaryColor,
+                obscureText: _obscureText,
                 autocorrect: false,
                 onEditingComplete: _onSubmit,
                 decoration: InputDecoration(
                   suffix: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      FaIcon(
-                        FontAwesomeIcons.solidCircleXmark,
-                        color: Colors.grey.shade400,
+                      GestureDetector(
+                        onTap: _onClearTap,
+                        child: FaIcon(
+                          FontAwesomeIcons.solidCircleXmark,
+                          color: Colors.grey.shade500,
+                          size: Sizes.size20,
+                        ),
                       ),
                       Gaps.h16,
-                      const FaIcon(FontAwesomeIcons.eye),
+                      FaIcon(
+                        FontAwesomeIcons.eye,
+                        color: Colors.grey.shade500,
+                        size: Sizes.size20,
+                      ),
                     ],
                   ),
                   hintText: "Make it strong!",
