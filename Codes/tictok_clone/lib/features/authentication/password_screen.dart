@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
+import 'package:tictok_clone/features/authentication/birthday_screen.dart';
 import 'package:tictok_clone/features/authentication/widgets/form_button.dart';
 
 class PasswordScreen extends StatefulWidget {
@@ -42,11 +43,11 @@ class _PasswordScreenState extends State<PasswordScreen> {
   }
 
   void _onSubmit() {
-    if (_password.isEmpty || _isPasswordVaild()) return;
+    if (!_isPasswordVaild()) return;
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const PasswordScreen(),
+        builder: (context) => const BirthdayScreen(),
       ),
     );
   }
@@ -138,10 +139,16 @@ class _PasswordScreenState extends State<PasswordScreen> {
               ),
               Gaps.v10,
               Row(
-                children: const [
+                children: [
                   FaIcon(
                     FontAwesomeIcons.circleCheck,
-                  )
+                    size: Sizes.size20,
+                    color: _isPasswordVaild()
+                        ? Colors.green
+                        : Colors.grey.shade400,
+                  ),
+                  Gaps.h5,
+                  const Text("8 to 20 characters"),
                 ],
               ),
               Gaps.v28,
