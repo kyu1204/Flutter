@@ -33,15 +33,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
     super.dispose();
   }
 
-  String? _isPasswordVaild() {
-    if (_password.isNotEmpty) {
-      final regExp = RegExp(
-          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-      if (!regExp.hasMatch(_password)) {
-        return "Email not valid";
-      }
-    }
-    return null;
+  bool _isPasswordVaild() {
+    return _password.isNotEmpty && _password.length > 8;
   }
 
   void _onScaffoldTap() {
@@ -49,7 +42,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
   }
 
   void _onSubmit() {
-    if (_password.isEmpty || _isPasswordVaild() != null) return;
+    if (_password.isEmpty || _isPasswordVaild()) return;
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -124,7 +117,6 @@ class _PasswordScreenState extends State<PasswordScreen> {
                     ],
                   ),
                   hintText: "Make it strong!",
-                  errorText: _isPasswordVaild(),
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.grey.shade400,
@@ -141,7 +133,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
               GestureDetector(
                 onTap: _onSubmit,
                 child: FormButton(
-                    disabled: _password.isEmpty || _isPasswordVaild() != null),
+                  disabled: !_isPasswordVaild(),
+                ),
               )
             ],
           ),
