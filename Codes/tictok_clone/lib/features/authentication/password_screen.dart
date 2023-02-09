@@ -129,7 +129,22 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   ),
                 ),
               ),
-              Gaps.v16,
+              Gaps.v10,
+              const Text(
+                "Your password must have:",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Gaps.v10,
+              Row(
+                children: const [
+                  FaIcon(
+                    FontAwesomeIcons.circleCheck,
+                  )
+                ],
+              ),
+              Gaps.v28,
               GestureDetector(
                 onTap: _onSubmit,
                 child: FormButton(
