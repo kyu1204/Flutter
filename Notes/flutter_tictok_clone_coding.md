@@ -96,3 +96,17 @@
 ![form button](/Assets/form_button.gif)
 
 ### Email Screen
+1. RegExp
+	2. hasMatch
+2. TextField
+	1. keyboardType
+		1. TextInputType.emailAddress
+	2. autocorrect
+	3. onEditingComplete
+		1. `done` button handler
+	4. decoration
+		1. errorText
+
+![email screen](/Assets/email_screen.gif)
+
+### Password Screen
