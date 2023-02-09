@@ -118,3 +118,7 @@
 3. Row
 	1. mainAxisSize
 		1. MainAxisSize.min
+
+![password screen](/Assets/password_screen.gif)
+
+### Birthday Screen
