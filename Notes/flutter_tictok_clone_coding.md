@@ -176,3 +176,13 @@
 ![scroll animation](/Assets/scroll_animation.gif)
 
 ### Tutorial Screen
+1. DefaultTabController
+	1. length
+2. TabBarView
+3. TabPageSelector
+	1. color
+	2. selectedColor
+
+![tutorial Screen](/Assets/tutorial_screen.gif)
+
+### AnimatedCrossFade
