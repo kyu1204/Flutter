@@ -34,10 +34,16 @@ class _PasswordScreenState extends State<PasswordScreen> {
     super.dispose();
   }
 
-  bool _isPasswordVaild() {
+  bool _isPasswordLengthVaild() {
     return _password.isNotEmpty &&
         _password.length > 8 &&
         _password.length < 20;
+  }
+
+  bool _isPasswordRegexpValid() {
+    final regExp = RegExp(
+        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+    return false;
   }
 
   void _onScaffoldTap() {
@@ -45,7 +51,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
   }
 
   void _onSubmit() {
-    if (!_isPasswordVaild()) return;
+    if (!_isPasswordLengthVaild()) return;
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -145,7 +151,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   FaIcon(
                     FontAwesomeIcons.circleCheck,
                     size: Sizes.size20,
-                    color: _isPasswordVaild()
+                    color: _isPasswordLengthVaild()
                         ? Colors.green
                         : Colors.grey.shade400,
                   ),
@@ -161,7 +167,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   FaIcon(
                     FontAwesomeIcons.circleCheck,
                     size: Sizes.size20,
-                    color: _isPasswordVaild()
+                    color: _isPasswordLengthVaild()
                         ? Colors.green
                         : Colors.grey.shade400,
                   ),
@@ -173,7 +179,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
               GestureDetector(
                 onTap: _onSubmit,
                 child: FormButton(
-                  disabled: !_isPasswordVaild(),
+                  disabled: !_isPasswordLengthVaild(),
                 ),
               )
             ],

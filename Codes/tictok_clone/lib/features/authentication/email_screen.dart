@@ -80,7 +80,7 @@ class _EmailScreenState extends State<EmailScreen> {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              Gaps.v16,
+              Gaps.v28,
               TextField(
                 controller: _emailController,
                 cursorColor: Theme.of(context).primaryColor,
@@ -102,7 +102,7 @@ class _EmailScreenState extends State<EmailScreen> {
                   ),
                 ),
               ),
-              Gaps.v16,
+              Gaps.v32,
               GestureDetector(
                 onTap: _onSubmit,
                 child: FormButton(
