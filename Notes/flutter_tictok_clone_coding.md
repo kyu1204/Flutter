@@ -155,3 +155,11 @@
 ![login form](/Assets/20230210203353.png)
 
 ## Onboarding
+### Interests Screen
+1. SingleChildScrollView
+2. Wrap
+	1. runSpacing
+	2. spacing
+
+![interests screen](/Assets/20230210215848.png)
+
