@@ -15,7 +15,8 @@ class BirthdayScreen extends StatefulWidget {
 class _BirthdayScreenState extends State<BirthdayScreen> {
   final TextEditingController _birthdayController = TextEditingController();
 
-  DateTime initialDate = DateTime.now();
+  DateTime initialDate =
+      DateTime.now().subtract(const Duration(days: 365 * 12));
 
   @override
   void initState() {
