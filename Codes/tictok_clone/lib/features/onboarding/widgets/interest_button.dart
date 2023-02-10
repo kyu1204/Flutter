@@ -27,7 +27,7 @@ class _InterestButtonState extends State<InterestButton> {
     return GestureDetector(
       onTap: _onTap,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 150),
         padding: const EdgeInsets.symmetric(
           vertical: Sizes.size16,
           horizontal: Sizes.size24,
@@ -50,9 +50,9 @@ class _InterestButtonState extends State<InterestButton> {
         ),
         child: Text(
           widget.interest,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: _isSelected ? Colors.white : Colors.black87),
         ),
       ),
     );

@@ -164,3 +164,14 @@
 ![interests screen](/Assets/20230210215848.png)
 
 ### Scroll Animations
+1. Scrollbar
+2. ScrollController
+	1. offset
+3. AnimatedOpacity
+	1. opacity
+	2. duration
+3. AnimatedContainer
+	1. duration
+
+![scroll animation](/Assets/scroll_animation.gif)
+
