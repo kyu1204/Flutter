@@ -81,13 +81,13 @@ class _PasswordScreenState extends State<PasswordScreen> {
             children: [
               Gaps.v40,
               const Text(
-                "Password",
+                "Create password",
                 style: TextStyle(
-                  fontSize: Sizes.size24,
+                  fontSize: Sizes.size20,
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              Gaps.v16,
+              Gaps.v28,
               TextField(
                 controller: _passwordController,
                 cursorColor: Theme.of(context).primaryColor,
@@ -150,10 +150,26 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         : Colors.grey.shade400,
                   ),
                   Gaps.h5,
-                  const Text("8 to 20 characters"),
+                  const Text(
+                    "8 to 20 characters",
+                  ),
                 ],
               ),
-              Gaps.v28,
+              Gaps.v5,
+              Row(
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.circleCheck,
+                    size: Sizes.size20,
+                    color: _isPasswordVaild()
+                        ? Colors.green
+                        : Colors.grey.shade400,
+                  ),
+                  Gaps.h5,
+                  const Text("Letters, numbers, and special characters"),
+                ],
+              ),
+              Gaps.v32,
               GestureDetector(
                 onTap: _onSubmit,
                 child: FormButton(
