@@ -91,6 +91,22 @@ class TutorialScreen extends StatelessWidget {
             ],
           ),
         ),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            padding: const EdgeInsets.symmetric(
+              vertical: Sizes.size48,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                TabPageSelector(
+                  color: Colors.white,
+                  selectedColor: Colors.black38,
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
