@@ -175,3 +175,4 @@
 
 ![scroll animation](/Assets/scroll_animation.gif)
 
+### Tutorial Screen
