@@ -163,3 +163,4 @@
 
 ![interests screen](/Assets/20230210215848.png)
 
+### Scroll Animations
