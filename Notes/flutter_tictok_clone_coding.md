@@ -138,4 +138,14 @@
 
 ### Login Form
 1. Form
-	1. 
+	1. It is a convenient way to build and organize a group of form fields. 
+	2. It provides a centralized and common structure for validating and submitting form data.
+	3. With the `Form` widget, you can define a group of form fields that are placed inside a `Form` container. 
+	4. You can also specify a common `validator` function that is called for each form field to validate its value.
+2. TextFormField
+	1. It is a material design text field used to receive input from the user. 
+	2. It is commonly used within a `Form` widget to build a form and provide an easy way to validate the user input.
+3. GlobalKey
+	1. It is a unique identifier that is used to identify a widget across multiple frames in a Flutter application. 
+	2. A `GlobalKey` can be used to access a widget and its properties, such as its state, from other parts of the application.
+	3. The `GlobalKey` is commonly used with `Form` and `FormField` widgets to access the form data and validate it. 
