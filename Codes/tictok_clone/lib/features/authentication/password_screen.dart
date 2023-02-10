@@ -42,7 +42,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
 
   bool _isPasswordRegexpValid() {
     final regExp =
-        RegExp(r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*_])[A-Za-z\d!@#$%^&*_]$");
+        RegExp(r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*_])[A-Za-z\d!@#$%^&*_]");
     return _password.isNotEmpty && regExp.hasMatch(_password);
   }
 
@@ -51,7 +51,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
   }
 
   void _onSubmit() {
-    if (!_isPasswordLengthVaild()) return;
+    if (!_isPasswordLengthVaild() || !_isPasswordRegexpValid()) return;
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -180,7 +180,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 onTap: _onSubmit,
                 child: FormButton(
                   disabled:
-                      !_isPasswordLengthVaild() && !_isPasswordRegexpValid(),
+                      !_isPasswordLengthVaild() || !_isPasswordRegexpValid(),
+                  text: "Next",
                 ),
               )
             ],
