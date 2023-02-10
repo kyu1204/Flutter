@@ -145,7 +145,12 @@
 2. TextFormField
 	1. It is a material design text field used to receive input from the user. 
 	2. It is commonly used within a `Form` widget to build a form and provide an easy way to validate the user input.
+	3. validator
+	4. onSaved
 3. GlobalKey
 	1. It is a unique identifier that is used to identify a widget across multiple frames in a Flutter application. 
 	2. A `GlobalKey` can be used to access a widget and its properties, such as its state, from other parts of the application.
 	3. The `GlobalKey` is commonly used with `Form` and `FormField` widgets to access the form data and validate it. 
+
+![login form](/Assets/20230210203353.png)
+
