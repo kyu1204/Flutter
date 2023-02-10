@@ -122,3 +122,17 @@
 ![password screen](/Assets/password_screen.gif)
 
 ### Birthday Screen
+1. DateTIme
+	1. yyyy-mm-dd HH:MM:SS
+2. Controller.value = TextEditingValue()
+3. bottomNavigationBar
+	1. BotoomAppBar
+		1. CupertinoDatePicker
+			1. initialDateTime
+			2. maximumDate
+			3. mode
+				1. CupertinoDatePickerMode.date
+			4. onDateTimeChanged
+
+![birthday screen](/Assets/20230210153926.png)
+

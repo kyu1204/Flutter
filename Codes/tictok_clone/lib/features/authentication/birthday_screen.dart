@@ -13,7 +13,7 @@ class BirthdayScreen extends StatefulWidget {
 }
 
 class _BirthdayScreenState extends State<BirthdayScreen> {
-  final TextEditingController _birthdayConroller = TextEditingController();
+  final TextEditingController _birthdayController = TextEditingController();
 
   DateTime initialDate = DateTime.now();
 
@@ -25,7 +25,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
 
   @override
   void dispose() {
-    _birthdayConroller.dispose();
+    _birthdayController.dispose();
     super.dispose();
   }
 
@@ -39,7 +39,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
 
   void _setTextFieldDate(DateTime date) {
     final textData = date.toString().split(' ').first;
-    _birthdayConroller.value = TextEditingValue(text: textData);
+    _birthdayController.value = TextEditingValue(text: textData);
   }
 
   @override
@@ -73,7 +73,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
             ),
             Gaps.v16,
             TextField(
-              controller: _birthdayConroller,
+              controller: _birthdayController,
               enabled: false,
               cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
