@@ -14,7 +14,10 @@ class TimerScreen extends StatefulWidget {
 }
 
 class _TimerScreenState extends State<TimerScreen> {
+  bool isRunning = false;
+
   late Future<List<HolidayModel>> holidays;
+  late HolidayModel holiday;
 
   late Timer timer;
 
@@ -32,20 +35,31 @@ class _TimerScreenState extends State<TimerScreen> {
   }
 
   void onTick(Timer timer) {
-    setState(() {
-      differenceDateTime = targetDateTime.difference(DateTime.now());
-    });
+    if (differenceDateTime.inSeconds == 0) {
+      setState(() {
+        isRunning = false;
+      });
+      timer.cancel();
+    } else {
+      setState(() {
+        differenceDateTime = targetDateTime.difference(DateTime.now());
+      });
+    }
   }
 
   void setHolidayData(AsyncSnapshot<List<HolidayModel>> snapshot) {
-    final holiday = snapshot.data!.first;
+    if (!isRunning) {
+      holiday = snapshot.data!.first;
+      snapshot.data!.removeAt(0);
+      isRunning = true;
 
-    targetDateTime = DateTime.parse(holiday.date);
-    holidayName = holiday.name;
-    date = "${holiday.year}. ${holiday.month}. ${holiday.day}";
-    dayStr = holiday.dayStr;
-    differenceDateTime = targetDateTime.difference(DateTime.now());
-    timer = Timer.periodic(const Duration(seconds: 1), onTick);
+      targetDateTime = DateTime.parse(holiday.date);
+      holidayName = holiday.name;
+      date = "${holiday.year}. ${holiday.month}. ${holiday.day}";
+      dayStr = holiday.dayStr;
+      differenceDateTime = targetDateTime.difference(DateTime.now());
+      timer = Timer.periodic(const Duration(seconds: 1), onTick);
+    }
   }
 
   String format(Duration diff) =>
@@ -75,7 +89,7 @@ class _TimerScreenState extends State<TimerScreen> {
                     Text(
                       holidayName,
                       style: const TextStyle(
-                        fontSize: Sizes.size24,
+                        fontSize: Sizes.size20,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -97,8 +111,10 @@ class _TimerScreenState extends State<TimerScreen> {
                   ],
                 );
               }
-              return const Center(
-                child: CircularProgressIndicator(),
+              return Center(
+                child: CircularProgressIndicator(
+                  color: Theme.of(context).primaryColor,
+                ),
               );
             },
           ),
