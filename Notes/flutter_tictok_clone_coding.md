@@ -186,3 +186,18 @@
 ![tutorial Screen](/Assets/tutorial_screen.gif)
 
 ### AnimatedCrossFade
+1. AnimatedCrossFade
+	1. It is fades between two children widgets with a smooth animation. 
+	2. It takes two child widgets and switches between them based on the provided `crossFadeState` property. 
+	3. When `crossFadeState` is set to `CrossFadeState.showFirst`, the first child widget is displayed, and when it is set to `CrossFadeState.showSecond`, the second child widget is displayed. 
+	4. The transition between the two widgets is animated over a specified duration using a fade effect.
+2. GestureDetector
+	1. onPanUpdate
+	2. onPanEnd
+3. BottomAppBar
+	1. AnimatiedOpacity
+	2. CupertinoButton
+
+![animated cross fade](/Assets/onboarding.gif)
+
+## Tab Navigation
