@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
@@ -76,7 +77,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                 children: const [
                   Gaps.v80,
                   Text(
-                    "Follow the",
+                    "Follow the rules",
                     style: TextStyle(
                       fontSize: Sizes.size40,
                       fontWeight: FontWeight.bold,
@@ -84,7 +85,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   ),
                   Gaps.v16,
                   Text(
-                    "Videos are personalized for you based on what you watch, like, and share.",
+                    "Take care of one another! Plis!",
                     style: TextStyle(
                       fontSize: Sizes.size20,
                     ),
@@ -95,6 +96,22 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   ? CrossFadeState.showFirst
                   : CrossFadeState.showSecond,
               duration: const Duration(milliseconds: 300),
+            ),
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Padding(
+            padding: const EdgeInsets.all(
+              Sizes.size24,
+            ),
+            child: AnimatedOpacity(
+              duration: const Duration(milliseconds: 300),
+              opacity: _showingPage == Page.first ? 0 : 1,
+              child: CupertinoButton(
+                onPressed: () {},
+                color: Theme.of(context).primaryColor,
+                child: const Text("Enter the app!"),
+              ),
             ),
           ),
         ),
