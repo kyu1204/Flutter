@@ -5,6 +5,7 @@ import 'package:hudy_flutter/constants/gaps.dart';
 import 'package:hudy_flutter/constants/sizes.dart';
 import 'package:hudy_flutter/models/holiday_model.dart';
 import 'package:hudy_flutter/services/api_service.dart';
+import 'package:hudy_flutter/services/db_service.dart';
 
 class TimerScreen extends StatefulWidget {
   const TimerScreen({super.key});
@@ -27,11 +28,18 @@ class _TimerScreenState extends State<TimerScreen> {
   late String date;
   late String dayStr;
 
+  late SQLiteDB db;
+
   @override
   void initState() {
     super.initState();
-
+    setDB();
     holidays = APIService.getHolidays();
+  }
+
+  void setDB() {
+    db = SQLiteDB();
+    db.open();
   }
 
   void onTick(Timer timer) {
