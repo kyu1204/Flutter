@@ -225,3 +225,17 @@
 ![cupertinotabbar](/Assets/cupertinotabbar.gif)
 
 ### Custom NavigationBar
+1. BottomAppBar
+	1. Padding
+	2. Row
+			1. Custom NavigationItem (NavTap)
+				1. Expanded
+				2. GestureDetector
+				3. Container
+				4. AnimatedOpacity
+				5. FaIcon
+				6. Text
+
+![custom navigationbar](/Assets/customnavigationbar.gif)
+
+### Stateful Navigation part One
