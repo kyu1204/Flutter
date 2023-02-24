@@ -213,3 +213,4 @@
 ![bottomnavigationbar](/Assets/bottomnavigationbar.gif)
 
 ### NavigationBar
+1. `NavigationBar` is pre-built widget in the Flutter framework 
