@@ -3,23 +3,41 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tictok_clone/constants/gaps.dart';
 
 class NavTab extends StatelessWidget {
-  const NavTab({super.key});
+  const NavTab({
+    super.key,
+    required this.text,
+    required this.isSelected,
+    required this.icon,
+    required this.onTap,
+  });
+
+  final String text;
+  final bool isSelected;
+  final IconData icon;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: const [
-        FaIcon(
-          FontAwesomeIcons.house,
-          color: Colors.white,
+    return GestureDetector(
+      onTap: () => onTap,
+      child: AnimatedOpacity(
+        opacity: isSelected ? 1 : 0.6,
+        duration: const Duration(milliseconds: 300),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FaIcon(
+              icon,
+              color: Colors.white,
+            ),
+            Gaps.v5,
+            Text(
+              text,
+              style: const TextStyle(color: Colors.white),
+            )
+          ],
         ),
-        Gaps.v5,
-        Text(
-          'Home',
-          style: TextStyle(color: Colors.white),
-        )
-      ],
+      ),
     );
   }
 }
