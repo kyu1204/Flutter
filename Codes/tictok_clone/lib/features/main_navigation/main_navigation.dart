@@ -18,6 +18,15 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     const Center(
       child: Text("Search"),
     ),
+    const Center(
+      child: Text("Home"),
+    ),
+    const Center(
+      child: Text("Search"),
+    ),
+    const Center(
+      child: Text("Home"),
+    ),
   ];
 
   void _onTap(int index) {
@@ -29,7 +38,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
         currentIndex: _selectedIndex,
         onTap: _onTap,
         selectedItemColor: Theme.of(context).primaryColor,
@@ -38,12 +49,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             icon: FaIcon(FontAwesomeIcons.house),
             label: "Home",
             tooltip: "What are you?",
+            backgroundColor: Colors.amber,
           ),
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.magnifyingGlass),
             label: "Search",
             tooltip: "What are you?",
-          )
+            backgroundColor: Colors.blue,
+          ),
         ],
       ),
     );
