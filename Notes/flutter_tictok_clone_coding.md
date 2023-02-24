@@ -201,3 +201,5 @@
 ![animated cross fade](/Assets/onboarding.gif)
 
 ## Tab Navigation
+### pushAndRemoveUntil
+1. `pushAndRemoveUntil` is a method in the Flutter framework's `Navigator` class that allows you to navigate to a new screen while removing all the previous screens from the navigation stack.
