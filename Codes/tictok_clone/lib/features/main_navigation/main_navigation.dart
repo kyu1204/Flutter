@@ -38,25 +38,28 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: screens[_selectedIndex],
-        bottomNavigationBar: NavigationBar(
-          labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-          selectedIndex: _selectedIndex,
-          onDestinationSelected: _onTap,
-          destinations: const [
-            NavigationDestination(
-                icon: FaIcon(
-                  FontAwesomeIcons.house,
-                  color: Colors.white,
-                ),
-                label: "Home"),
-            NavigationDestination(
-                icon: FaIcon(
-                  FontAwesomeIcons.magnifyingGlass,
-                  color: Colors.white,
-                ),
-                label: "Search")
-          ],
-        ));
+      body: screens[_selectedIndex],
+      bottomNavigationBar: NavigationBar(
+        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: _onTap,
+        destinations: const [
+          NavigationDestination(
+            icon: FaIcon(
+              FontAwesomeIcons.house,
+              color: Colors.white,
+            ),
+            label: "Home",
+          ),
+          NavigationDestination(
+            icon: FaIcon(
+              FontAwesomeIcons.magnifyingGlass,
+              color: Colors.white,
+            ),
+            label: "Search",
+          )
+        ],
+      ),
+    );
   }
 }
