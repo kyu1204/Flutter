@@ -206,4 +206,9 @@
 ### BottomNavigationBar
 1. `BottomNavigationBar` is a pre-built widget in the Flutter framework that provides a navigation bar at the bottom of the screen. 
 2. It is typically used to switch between different sections or pages of an app.
-3. The `BottomNavigationBar` widget can be customized with icons and labels for each navigation item, and it supports a maximum of five navigation items at once. When a user taps on a navigation item, the corresponding screen is displayed.
+3. The `BottomNavigationBar` widget can be customized with icons and labels for each navigation item, and it supports a maximum of five navigation items at once. 
+4. When a user taps on a navigation item, the corresponding screen is displayed.
+
+![bottomnavigationbar](/Assets/bottomnavigationbar.gif)
+
+### NavigationBar
