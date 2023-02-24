@@ -213,4 +213,8 @@
 ![bottomnavigationbar](/Assets/bottomnavigationbar.gif)
 
 ### NavigationBar
-1. `NavigationBar` is pre-built widget in the Flutter framework 
+1. `NavigationBar` is new widget in the Flutter framework that follow `Material Design 3`
+
+![NavigationBar](/Assets/navigationbar.gif)
+
+### CupertinoTabBar
