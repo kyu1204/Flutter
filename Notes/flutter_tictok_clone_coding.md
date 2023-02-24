@@ -213,8 +213,15 @@
 ![bottomnavigationbar](/Assets/bottomnavigationbar.gif)
 
 ### NavigationBar
-1. `NavigationBar` is new widget in the Flutter framework that follow `Material Design 3`
+1. `NavigationBar` is new widget in the Flutter framework that provides a tab bar following the  `Material Design 3`
 
 ![NavigationBar](/Assets/navigationbar.gif)
 
 ### CupertinoTabBar
+1. The `CupertinoTabBar` widget is a built-in Flutter widget that provides a tab bar following the iOS design language, also known as the Cupertino style. 
+2. It is part of the Cupertino library in Flutter, which contains a set of widgets and styles that mimic the look and feel of iOS applications.
+3. To use the `CupertinoTabBar` widget in your app, you will need to import the `cupertino` library and wrap your widget tree in a `CupertinoApp` widget.
+
+![cupertinotabbar](/Assets/cupertinotabbar.gif)
+
+### Custom Navigation
