@@ -93,14 +93,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 onTap: () => _onTap(1),
               ),
               Gaps.h24,
-              GestureDetector(
-                onLongPressDown: (details) => _onPostVideoButtonLongPressDown(),
-                onLongPressCancel: _onPostVideoButtonLongPressEnd,
-                onLongPressEnd: (details) => _onPostVideoButtonLongPressEnd(),
+              PostVideoButton(
                 onTap: _onPostVideoButtonTap,
-                child: PostVideoButton(
-                  scale: _scale,
-                ),
               ),
               Gaps.h24,
               NavTab(
