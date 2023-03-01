@@ -15,7 +15,7 @@ class MainNavigationScreen extends StatefulWidget {
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _selectedIndex = 0;
-  bool _isHover = false;
+  double _scale = 1.0;
 
   void _onTap(int index) {
     setState(() {
@@ -38,13 +38,13 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
   void _onPostVideoButtonLongPressDown() {
     setState(() {
-      _isHover = true;
+      _scale = 1.2;
     });
   }
 
   void _onPostVideoButtonLongPressEnd() {
     setState(() {
-      _isHover = false;
+      _scale = 1.0;
     });
   }
 
@@ -99,7 +99,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 onLongPressEnd: (details) => _onPostVideoButtonLongPressEnd(),
                 onTap: _onPostVideoButtonTap,
                 child: PostVideoButton(
-                  isHover: _isHover,
+                  scale: _scale,
                 ),
               ),
               Gaps.h24,
