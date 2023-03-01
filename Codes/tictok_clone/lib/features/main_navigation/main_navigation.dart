@@ -74,11 +74,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                     child: Container(
                       height: 30,
                       width: 25,
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: Sizes.size8),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: Sizes.size8,
+                      ),
                       decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(Sizes.size11),
+                        color: const Color(0xFF61D4F0),
+                        borderRadius: BorderRadius.circular(
+                          Sizes.size8,
+                        ),
                       ),
                     ),
                   ),
@@ -87,23 +90,33 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                     child: Container(
                       height: 30,
                       width: 25,
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: Sizes.size8),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: Sizes.size8,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.red,
-                        borderRadius: BorderRadius.circular(Sizes.size11),
+                        borderRadius: BorderRadius.circular(
+                          Sizes.size8,
+                        ),
                       ),
                     ),
                   ),
                   Container(
                     height: 30,
-                    decoration: const BoxDecoration(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Sizes.size12,
+                    ),
+                    decoration: BoxDecoration(
                       color: Colors.white,
+                      borderRadius: BorderRadius.circular(
+                        Sizes.size6,
+                      ),
                     ),
                     child: const Center(
                       child: FaIcon(
                         FontAwesomeIcons.plus,
                         color: Colors.black,
+                        size: Sizes.size16 + Sizes.size2,
                       ),
                     ),
                   )
