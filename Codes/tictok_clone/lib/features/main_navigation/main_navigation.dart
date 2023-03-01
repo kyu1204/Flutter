@@ -18,16 +18,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       child: Text("Home"),
     ),
     const Center(
-      child: Text("Search"),
+      child: Text("Discover"),
+    ),
+    Container(),
+    const Center(
+      child: Text("Inbox"),
     ),
     const Center(
-      child: Text("Home"),
-    ),
-    const Center(
-      child: Text("Search"),
-    ),
-    const Center(
-      child: Text("Home"),
+      child: Text("Profile"),
     ),
   ];
 
