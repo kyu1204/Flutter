@@ -238,4 +238,6 @@
 
 ![custom navigationbar](/Assets/customnavigationbar.gif)
 
-### Stateful Navigation part One
+### Stateful Navigation
+1. Offstage
+	1. 
