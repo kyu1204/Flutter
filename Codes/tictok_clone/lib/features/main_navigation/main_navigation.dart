@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
 import 'package:tictok_clone/features/main_navigation/sft_screen.dart';
 import 'package:tictok_clone/features/main_navigation/widgets/nav_tab.dart';
@@ -64,6 +65,51 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 selectedIcon: FontAwesomeIcons.solidCompass,
                 onTap: () => _onTap(1),
               ),
+              Gaps.h24,
+              Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Positioned(
+                    right: 20,
+                    child: Container(
+                      height: 30,
+                      width: 25,
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: Sizes.size8),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(Sizes.size11),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 20,
+                    child: Container(
+                      height: 30,
+                      width: 25,
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: Sizes.size8),
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(Sizes.size11),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 30,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                    ),
+                    child: const Center(
+                      child: FaIcon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.black,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Gaps.h24,
               NavTab(
                 text: "Inbox",
                 isSelected: _selectedIndex == 3,
