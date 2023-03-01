@@ -3,7 +3,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tictok_clone/constants/sizes.dart';
 
 class PostVideoButton extends StatelessWidget {
-  const PostVideoButton({super.key});
+  const PostVideoButton({
+    super.key,
+    required this.isHover,
+  });
+
+  final bool isHover;
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +17,9 @@ class PostVideoButton extends StatelessWidget {
       children: [
         Positioned(
           right: 20,
-          child: Container(
-            height: 30,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 100),
+            height: isHover ? Sizes.size40 : 30,
             width: 25,
             padding: const EdgeInsets.symmetric(
               horizontal: Sizes.size8,
@@ -28,8 +34,9 @@ class PostVideoButton extends StatelessWidget {
         ),
         Positioned(
           left: 20,
-          child: Container(
-            height: 30,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 100),
+            height: isHover ? Sizes.size40 : 30,
             width: 25,
             padding: const EdgeInsets.symmetric(
               horizontal: Sizes.size8,
@@ -42,8 +49,9 @@ class PostVideoButton extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          height: 30,
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 100),
+          height: isHover ? Sizes.size40 : 30,
           padding: const EdgeInsets.symmetric(
             horizontal: Sizes.size12,
           ),

@@ -98,7 +98,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 onLongPressCancel: _onPostVideoButtonLongPressEnd,
                 onLongPressEnd: (details) => _onPostVideoButtonLongPressEnd(),
                 onTap: _onPostVideoButtonTap,
-                child: const PostVideoButton(),
+                child: PostVideoButton(
+                  isHover: _isHover,
+                ),
               ),
               Gaps.h24,
               NavTab(
