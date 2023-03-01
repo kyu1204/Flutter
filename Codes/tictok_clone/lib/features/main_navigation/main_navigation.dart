@@ -15,6 +15,7 @@ class MainNavigationScreen extends StatefulWidget {
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _selectedIndex = 0;
+  bool _isHover = false;
 
   void _onTap(int index) {
     setState(() {
@@ -33,6 +34,18 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         fullscreenDialog: true,
       ),
     );
+  }
+
+  void _onPostVideoButtonLongPressDown() {
+    setState(() {
+      _isHover = true;
+    });
+  }
+
+  void _onPostVideoButtonLongPressEnd() {
+    setState(() {
+      _isHover = false;
+    });
   }
 
   @override
@@ -81,6 +94,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
               ),
               Gaps.h24,
               GestureDetector(
+                onLongPressDown: (details) => _onPostVideoButtonLongPressDown(),
+                onLongPressCancel: _onPostVideoButtonLongPressEnd,
+                onLongPressEnd: (details) => _onPostVideoButtonLongPressEnd(),
                 onTap: _onPostVideoButtonTap,
                 child: const PostVideoButton(),
               ),
