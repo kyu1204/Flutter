@@ -44,8 +44,13 @@ class _PostVideoButtonState extends State<PostVideoButton>
     _controller.forward();
   }
 
+  void _onLongPressCancle() {
+    _controller.reverse();
+  }
+
   void _onLongPressEnd() {
     _controller.reverse();
+    widget.onTap();
   }
 
   @override
@@ -53,9 +58,9 @@ class _PostVideoButtonState extends State<PostVideoButton>
     _scale = _controller.value + 1;
     return GestureDetector(
       onLongPressDown: (details) => _onLongPressDown(),
-      onLongPressCancel: _onLongPressEnd,
+      onLongPressCancel: _onLongPressCancle,
       onLongPressEnd: (details) => _onLongPressEnd(),
-      onTap: () => widget.onTap,
+      onTap: () => widget.onTap(),
       child: Transform.scale(
         scale: _scale,
         child: Stack(

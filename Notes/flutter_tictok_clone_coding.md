@@ -248,3 +248,12 @@
 ![offstage](/Assets/offstage.gif)
 
 ### Post Video Button
+1. Stack
+	1. clipBehavior: Clip.none
+2. Positioned
+3. AnimationController
+4. FaIcon
+
+![post video button](/Assets/20230301184623.png)
+
+## Video Timeline
