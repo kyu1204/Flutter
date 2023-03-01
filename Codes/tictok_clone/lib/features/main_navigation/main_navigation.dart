@@ -4,6 +4,7 @@ import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
 import 'package:tictok_clone/features/main_navigation/sft_screen.dart';
 import 'package:tictok_clone/features/main_navigation/widgets/nav_tab.dart';
+import 'package:tictok_clone/features/main_navigation/widgets/post_video_button.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -66,62 +67,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 onTap: () => _onTap(1),
               ),
               Gaps.h24,
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    right: 20,
-                    child: Container(
-                      height: 30,
-                      width: 25,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: Sizes.size8,
-                      ),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF61D4F0),
-                        borderRadius: BorderRadius.circular(
-                          Sizes.size8,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 20,
-                    child: Container(
-                      height: 30,
-                      width: 25,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: Sizes.size8,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(
-                          Sizes.size8,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 30,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: Sizes.size12,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(
-                        Sizes.size6,
-                      ),
-                    ),
-                    child: const Center(
-                      child: FaIcon(
-                        FontAwesomeIcons.plus,
-                        color: Colors.black,
-                        size: Sizes.size16 + Sizes.size2,
-                      ),
-                    ),
-                  )
-                ],
-              ),
+              const PostVideoButton(),
               Gaps.h24,
               NavTab(
                 text: "Inbox",
