@@ -22,6 +22,15 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     });
   }
 
+  void _onPostVideoButtonTap() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Container(),
+        fullscreenDialog: true,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +76,10 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 onTap: () => _onTap(1),
               ),
               Gaps.h24,
-              const PostVideoButton(),
+              GestureDetector(
+                onTap: _onPostVideoButtonTap,
+                child: const PostVideoButton(),
+              ),
               Gaps.h24,
               NavTab(
                 text: "Inbox",
