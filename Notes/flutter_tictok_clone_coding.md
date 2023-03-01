@@ -240,4 +240,11 @@
 
 ### Stateful Navigation
 1. Offstage
-	1. 
+	1. It is a widget that allows you to hide its child without removing it from the widget tree. 
+	2. It can be useful for cases where you need to conditionally hide or show a widget.
+	3. The `Offstage` widget takes a boolean parameter called `offstage` that determines whether its child should be visible or hidden. 
+	4. If `offstage` is true, the child is hidden, and if it is false, the child is visible.
+
+![offstage](/Assets/offstage.gif)
+
+### Post Video Button
