@@ -1,5 +1,4 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
 
 class VideoTimelineScreen extends StatefulWidget {
   const VideoTimelineScreen({super.key});
@@ -9,8 +8,21 @@ class VideoTimelineScreen extends StatefulWidget {
 }
 
 class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
+  List<Color> colors = [
+    Colors.black,
+    Colors.red,
+    Colors.yellow,
+    Colors.teal,
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return PageView.builder(
+      scrollDirection: Axis.vertical,
+      itemCount: 4,
+      itemBuilder: (context, index) => Container(
+        color: colors[index],
+      ),
+    );
   }
 }
