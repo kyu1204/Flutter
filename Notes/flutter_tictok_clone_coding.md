@@ -309,3 +309,9 @@
 2. It provides a way to listen to an `Animation` object and rebuild a part of the widget tree when the animation changes.
 3. The `AnimatedBuilder` widget is typically used in conjunction with other animation classes like `Tween` and `AnimationController` to create custom animations in Flutter.
 ### SingleTickerProviderStateMixin
+1. Provides a single Ticker that is configured to only tick while the current tree is enabled.
+2. A `Ticker` is an object that generates a sequence of frames over time, which can be used to animate a widget or other visual element. 
+3. The `AnimationController` is a class that controls the duration and behavior of an animation, and it is typically created with a `Ticker` object.
+4. In summary, `SingleTickerProviderStateMixin` is used to provide a `TickerProvider` for an `AnimationController`, while `Ticker` is an object that generates a sequence of frames over time to animate a widget or other visual element. 
+5. Together, they provide the foundation for smooth and responsive animations in Flutter.
+### Video UI
