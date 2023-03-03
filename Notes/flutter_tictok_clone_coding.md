@@ -264,3 +264,15 @@
 2. PageView.builder
 	1. It is a constructor for the `PageView` widget that allows you to build a set of pages dynamically using a builder function. 
 	2. It is similar to the `ListView.builder` method in that it only builds the pages that are currently visible on the screen, which makes it more efficient than creating all the pages upfront.
+### PageController
+1. PageController
+	1. It is a class that is used to control the state of a `PageView` widget. 
+	2. It allows you to programmatically scroll through the pages, as well as to get information about the current page and listen for changes to the current page.
+### VIdeo Player
+1. Stack
+2. Positioned.fill
+3. VideoPlayer
+	1. It is a widget that provides a way to play videos in your app. 
+	2. It's a part of the Flutter's video player plugin, which provides a customizable video player for both iOS and Android.
+	3. The `VideoPlayer` widget is a stateful widget that uses the `VideoPlayerController` class to manage the video playback. 
+	4. The `VideoPlayerController` class is responsible for loading the video from a specified URL or file path, and controlling the playback of the video. You can create a new instance of `VideoPlayerController` by passing in the URL or file path of the video you want to play.
