@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -114,7 +115,48 @@ class _VideoPostState extends State<VideoPost>
                 ),
               ),
             ),
-          )
+          ),
+          Positioned(
+            bottom: 20,
+            left: 10,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  "@밍구",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: Sizes.size18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Gaps.v10,
+                Text(
+                  "There is Universal Studios!!",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: Sizes.size16,
+                  ),
+                )
+              ],
+            ),
+          ),
+          Positioned(
+              bottom: 20,
+              right: 10,
+              child: Column(
+                children: const [
+                  CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black,
+                    foregroundColor: Colors.white,
+                    foregroundImage: NetworkImage(
+                      "https://avatars.githubusercontent.com/u/33680799?v=4",
+                    ),
+                    child: Text("밍구"),
+                  )
+                ],
+              ))
         ],
       ),
     );
