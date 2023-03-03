@@ -5,13 +5,10 @@ import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class VideoPost extends StatefulWidget {
-  final Function onVideoFinished;
-
   final int index;
 
   const VideoPost({
     super.key,
-    required this.onVideoFinished,
     required this.index,
   });
 
@@ -21,26 +18,19 @@ class VideoPost extends StatefulWidget {
 
 class _VideoPostState extends State<VideoPost>
     with SingleTickerProviderStateMixin {
-  final VideoPlayerController _videoPlayerController =
-      VideoPlayerController.asset("assets/videos/video.MOV");
-
+  late final VideoPlayerController _videoPlayerController;
   late final AnimationController _animationController;
 
   final Duration _animationDuration = const Duration(milliseconds: 200);
 
   bool _isPaused = false;
 
-  void _onVideoChange() {
-    if (_videoPlayerController.value.duration ==
-        _videoPlayerController.value.position) {
-      widget.onVideoFinished();
-    }
-  }
-
   void _initVideoPlayer() async {
+    _videoPlayerController =
+        VideoPlayerController.asset("assets/videos/video.MOV");
     await _videoPlayerController.initialize();
+    await _videoPlayerController.setLooping(true);
     setState(() {});
-    _videoPlayerController.addListener(_onVideoChange);
   }
 
   @override
