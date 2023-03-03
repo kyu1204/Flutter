@@ -54,9 +54,7 @@ class _VideoPostState extends State<VideoPost>
       upperBound: 1.5,
       value: 1.5,
       duration: _animationDuration,
-    )..addListener(() {
-        setState(() {});
-      });
+    )
   }
 
   @override
