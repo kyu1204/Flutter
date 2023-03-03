@@ -308,5 +308,4 @@
 1. It is used to create custom animations. 
 2. It provides a way to listen to an `Animation` object and rebuild a part of the widget tree when the animation changes.
 3. The `AnimatedBuilder` widget is typically used in conjunction with other animation classes like `Tween` and `AnimationController` to create custom animations in Flutter.
-
 ### SingleTickerProviderStateMixin
