@@ -257,4 +257,10 @@
 ![post video button](/Assets/20230301184623.png)
 
 ## Video Timeline
-### 
+### Infinite Scrolling
+1. PageView
+	1. It is a scrollable container that allows you to swipe horizontally or vertically through a set of pages. 
+	2. It is commonly used to create image carousels, walkthroughs, and other similar components that display multiple pages of content.
+2. PageView.builder
+	1. It is a constructor for the `PageView` widget that allows you to build a set of pages dynamically using a builder function. 
+	2. It is similar to the `ListView.builder` method in that it only builds the pages that are currently visible on the screen, which makes it more efficient than creating all the pages upfront.
