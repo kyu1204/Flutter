@@ -15,7 +15,6 @@ class MainNavigationScreen extends StatefulWidget {
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _selectedIndex = 0;
-  double _scale = 1.0;
 
   void _onTap(int index) {
     setState(() {
@@ -34,18 +33,6 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         fullscreenDialog: true,
       ),
     );
-  }
-
-  void _onPostVideoButtonLongPressDown() {
-    setState(() {
-      _scale = 1.2;
-    });
-  }
-
-  void _onPostVideoButtonLongPressEnd() {
-    setState(() {
-      _scale = 1.0;
-    });
   }
 
   @override
