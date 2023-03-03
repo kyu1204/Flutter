@@ -329,3 +329,8 @@
 ![video ui](/Assets/20230303230944.png)
 
 ### RefreshIndicator
+1. It is a built-in widget that provides a pull-to-refresh functionality for a list or a scrollable widget. 
+2. It is typically used with a ListView, GridView, or CustomScrollView, where users can drag down the screen to refresh the content.
+3. When a user pulls down the screen, the RefreshIndicator displays an indicator at the top of the screen, which shows a loading animation. 
+4. If the user continues to pull down the screen beyond a certain threshold, the onRefresh callback is called, which triggers a refresh of the content.
+
