@@ -16,7 +16,6 @@ class PostVideoButton extends StatefulWidget {
 
 class _PostVideoButtonState extends State<PostVideoButton>
     with SingleTickerProviderStateMixin {
-  late double _scale;
   late AnimationController _controller;
 
   @override
@@ -27,11 +26,9 @@ class _PostVideoButtonState extends State<PostVideoButton>
       duration: const Duration(
         milliseconds: 100,
       ),
-      lowerBound: 0.0,
-      upperBound: 0.2,
-    )..addListener(() {
-        setState(() {});
-      });
+      lowerBound: 1.0,
+      upperBound: 1.2,
+    );
   }
 
   @override
@@ -55,14 +52,19 @@ class _PostVideoButtonState extends State<PostVideoButton>
 
   @override
   Widget build(BuildContext context) {
-    _scale = _controller.value + 1;
     return GestureDetector(
       onLongPressDown: (details) => _onLongPressDown(),
       onLongPressCancel: _onLongPressCancle,
       onLongPressEnd: (details) => _onLongPressEnd(),
       onTap: () => widget.onTap(),
-      child: Transform.scale(
-        scale: _scale,
+      child: AnimatedBuilder(
+        animation: _controller,
+        builder: (context, child) {
+          return Transform.scale(
+            scale: _controller.value,
+            child: child,
+          );
+        },
         child: Stack(
           clipBehavior: Clip.none,
           children: [
