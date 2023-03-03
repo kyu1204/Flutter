@@ -20,6 +20,11 @@ class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
   ];
 
   void _onPageChange(int page) {
+    _pageController.animateToPage(
+      page,
+      duration: const Duration(milliseconds: 150),
+      curve: Curves.linear,
+    );
     if (page == _itemCount - 1) {
       _itemCount = _itemCount + 4;
       colors.addAll(
@@ -30,6 +35,7 @@ class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
           Colors.teal,
         ],
       );
+
       setState(() {});
     }
   }
