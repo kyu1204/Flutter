@@ -284,4 +284,18 @@
 
 ![video player](/Assets/videoplayer.gif)
 
-### VisibilityDectector
+### VisibilityDetector
+1. VisibilityDetector
+	1. It is a widget that allows you to detect when a widget is visible within the viewport of your app. 
+	2. It's a part of the `visibility_detector` package, which provides a way to monitor the visibility of widgets in your app.
+	3. The `VisibilityDetector` widget works by creating a `VisibilityInfo` object that contains information about the visibility of the widget. 
+	4. You can then use this object to perform actions when the widget becomes visible or invisible within the viewport.
+2. IgnorePointer
+	1. It is used to prevent a widget from receiving input events such as taps, drags, and gestures. 
+	2. It is often used in combination with other widgets to create complex user interfaces.
+	3. When a `IgnorePointer` widget is placed on top of another widget, it prevents the underlying widget from receiving input events. 
+	4. This is useful in scenarios where you want to disable user interaction with a widget, such as when it is being updated or is in an inactive state.
+
+![visibilitydetector](/Assets/visibilitydetector.gif)
+
+### AnimationController
