@@ -299,3 +299,9 @@
 ![visibilitydetector](/Assets/visibilitydetector.gif)
 
 ### AnimationController
+1. It is used to control animations. It provides a way to specify the duration and curve of an animation, as well as methods to start, stop, and reverse the animation.
+2. The `AnimationController` class is typically used in conjunction with other animation classes like `Tween`, `Animation`, and `AnimatedWidget` to create custom animations in Flutter.
+
+![animationcontroller](/Assets/animationcontroller.gif)
+
+### AnimatedBuilder
