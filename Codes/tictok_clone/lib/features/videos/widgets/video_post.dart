@@ -58,7 +58,9 @@ class _VideoPostState extends State<VideoPost>
   }
 
   void _onVisibilityChanged(VisibilityInfo info) {
-    if (info.visibleFraction == 1 && !_videoPlayerController.value.isPlaying) {
+    if (info.visibleFraction == 1 &&
+        !_isPaused &&
+        !_videoPlayerController.value.isPlaying) {
       _videoPlayerController.play();
     }
   }
@@ -67,14 +69,16 @@ class _VideoPostState extends State<VideoPost>
     if (_videoPlayerController.value.isPlaying) {
       _videoPlayerController.pause();
       _animationController.reverse();
-      _isPaused = true;
     } else {
       _videoPlayerController.play();
       _animationController.forward();
-      _isPaused = false;
     }
-    setState(() {});
+    setState(() {
+      _isPaused = !_isPaused;
+    });
   }
+
+  void onCommentsTap() {}
 
   @override
   Widget build(BuildContext context) {
@@ -191,8 +195,8 @@ class _VideoPostState extends State<VideoPost>
             bottom: 20,
             right: 10,
             child: Column(
-              children: const [
-                CircleAvatar(
+              children: [
+                const CircleAvatar(
                   radius: 25,
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
@@ -202,17 +206,20 @@ class _VideoPostState extends State<VideoPost>
                   child: Text("밍구"),
                 ),
                 Gaps.v24,
-                VideoButton(
+                const VideoButton(
                   icon: FontAwesomeIcons.solidHeart,
                   text: "2.9M",
                 ),
                 Gaps.v24,
-                VideoButton(
-                  icon: FontAwesomeIcons.solidComment,
-                  text: "33K",
+                GestureDetector(
+                  onTap: onCommentsTap,
+                  child: const VideoButton(
+                    icon: FontAwesomeIcons.solidComment,
+                    text: "33K",
+                  ),
                 ),
                 Gaps.v24,
-                VideoButton(
+                const VideoButton(
                   icon: FontAwesomeIcons.share,
                   text: "Share",
                 ),
