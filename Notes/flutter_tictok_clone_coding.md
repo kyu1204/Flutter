@@ -342,6 +342,9 @@
 	1. It is a built-in function in the Flutter framework that displays a bottom sheet that slides up from the bottom of the screen to display additional content and options for the user. 
 	2. It is commonly used to present additional information, settings, or actions that are related to the current screen or context.
 ### Comments
+* main_navigation
+	* Scaffold
+		* resizeToAvoidBottomInset: false
 1. Scaffold
 2. AppBar
 3. ListView.separated
@@ -372,3 +375,11 @@
 ![add comment](/Assets/20230304173032.png)
 
 ### Text Input Actions
+1. suffixIcon
+	1. Padding
+	2. Row
+	3. FaIcon
+
+![text input action](/Assets/20230304175224.png)
+
+## Discover

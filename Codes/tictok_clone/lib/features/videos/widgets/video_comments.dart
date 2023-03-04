@@ -17,7 +17,7 @@ class _VideoCommentsState extends State<VideoComments> {
     Navigator.of(context).pop();
   }
 
-  void _onBodyTap() {
+  void _stopWriting() {
     FocusScope.of(context).unfocus();
     setState(() {
       _isWriting = false;
@@ -54,7 +54,7 @@ class _VideoCommentsState extends State<VideoComments> {
           ],
         ),
         body: GestureDetector(
-          onTap: _onBodyTap,
+          onTap: _stopWriting,
           child: Stack(
             children: [
               ListView.separated(
@@ -141,23 +141,53 @@ class _VideoCommentsState extends State<VideoComments> {
                               textInputAction: TextInputAction.newline,
                               cursorColor: Theme.of(context).primaryColor,
                               decoration: InputDecoration(
-                                  hintText: "Add comment...",
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(
-                                      Sizes.size12,
-                                    ),
-                                    borderSide: BorderSide.none,
+                                hintText: "Add comment...",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    Sizes.size12,
                                   ),
-                                  filled: true,
-                                  fillColor: Colors.grey.shade200,
-                                  contentPadding: const EdgeInsets.symmetric(
-                                    horizontal: Sizes.size10,
+                                  borderSide: BorderSide.none,
+                                ),
+                                filled: true,
+                                fillColor: Colors.grey.shade200,
+                                contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: Sizes.size10,
+                                ),
+                                suffixIcon: Padding(
+                                  padding: const EdgeInsets.only(
+                                    right: Sizes.size14,
                                   ),
-                                  suffixIcon: const Padding(
-                                    padding: EdgeInsets.only(
-                                      right: Sizes.size14,
-                                    ),
-                                  )),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      FaIcon(
+                                        FontAwesomeIcons.at,
+                                        color: Colors.grey.shade900,
+                                      ),
+                                      Gaps.h14,
+                                      FaIcon(
+                                        FontAwesomeIcons.gift,
+                                        color: Colors.grey.shade900,
+                                      ),
+                                      Gaps.h14,
+                                      FaIcon(
+                                        FontAwesomeIcons.faceSmile,
+                                        color: Colors.grey.shade900,
+                                      ),
+                                      Gaps.h14,
+                                      if (_isWriting)
+                                        GestureDetector(
+                                          onTap: _stopWriting,
+                                          child: FaIcon(
+                                            FontAwesomeIcons.circleArrowUp,
+                                            color:
+                                                Theme.of(context).primaryColor,
+                                          ),
+                                        ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         )
