@@ -5,6 +5,7 @@ import 'package:readmore/readmore.dart';
 import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
 import 'package:tictok_clone/features/videos/widgets/video_button.dart';
+import 'package:tictok_clone/features/videos/widgets/video_comments.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -78,7 +79,18 @@ class _VideoPostState extends State<VideoPost>
     });
   }
 
-  void onCommentsTap() {}
+  void _onCommentsTap(BuildContext context) async {
+    if (_videoPlayerController.value.isPlaying) {
+      _onTogglePause();
+    }
+    await showModalBottomSheet(
+      context: context,
+      builder: (context) => const VideoComments(),
+    );
+    if (!_videoPlayerController.value.isPlaying) {
+      _onTogglePause();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -212,7 +224,7 @@ class _VideoPostState extends State<VideoPost>
                 ),
                 Gaps.v24,
                 GestureDetector(
-                  onTap: onCommentsTap,
+                  onTap: () => _onCommentsTap(context),
                   child: const VideoButton(
                     icon: FontAwesomeIcons.solidComment,
                     text: "33K",
