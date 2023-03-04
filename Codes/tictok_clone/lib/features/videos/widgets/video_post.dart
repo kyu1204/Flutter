@@ -84,6 +84,7 @@ class _VideoPostState extends State<VideoPost>
       _onTogglePause();
     }
     await showModalBottomSheet(
+      isScrollControlled: true,
       context: context,
       backgroundColor: Colors.transparent,
       builder: (context) => const VideoComments(),

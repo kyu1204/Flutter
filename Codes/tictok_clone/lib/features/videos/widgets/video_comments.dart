@@ -17,8 +17,11 @@ class _VideoCommentsState extends State<VideoComments> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Container(
       clipBehavior: Clip.hardEdge,
+      height: size.height * 0.75,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(Sizes.size14),
       ),
@@ -93,21 +96,41 @@ class _VideoCommentsState extends State<VideoComments> {
             ),
             Positioned(
               bottom: 0,
+              width: size.width,
               child: BottomAppBar(
                 color: Colors.white,
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 18,
-                      backgroundColor: Colors.grey.shade500,
-                      foregroundColor: Colors.white,
-                      child: const Text("밍구"),
-                    ),
-                    Gaps.h10,
-                    const Expanded(
-                      child: TextField(),
-                    )
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: Sizes.size16,
+                    right: Sizes.size16,
+                    bottom: Sizes.size10,
+                    top: Sizes.size5,
+                  ),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 18,
+                        backgroundColor: Colors.grey.shade500,
+                        foregroundColor: Colors.white,
+                        child: const Text("밍구"),
+                      ),
+                      Gaps.h10,
+                      Expanded(
+                        child: TextField(
+                          cursorColor: Theme.of(context).primaryColor,
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            filled: true,
+                            fillColor: Colors.grey.shade200,
+                            contentPadding: const EdgeInsets.symmetric(
+                              vertical: Sizes.size10,
+                              horizontal: Sizes.size12,
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             )
