@@ -355,3 +355,20 @@
 ![comments](/Assets/20230304170243.png)
 
 ### Add Comment
+1. Not use BottomNavigator
+2. Stack
+3. Positioned
+	1. bottom: 0
+	2. width: MediaQuery.of(context).size.width
+4. MediaQuery
+5. CircleAvatar
+6. Expanded
+7. TextField
+	1. InputDecoration
+	2. OutlineInputBorder
+		1. BorderRadius
+		2. BorderSide.none
+
+![add comment](/Assets/20230304173032.png)
+
+### Text Input Actions
