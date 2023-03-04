@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:marquee/marquee.dart';
+import 'package:readmore/readmore.dart';
 import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
 import 'package:tictok_clone/features/videos/widgets/video_button.dart';
@@ -120,26 +122,69 @@ class _VideoPostState extends State<VideoPost>
           Positioned(
             bottom: 20,
             left: 10,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  "@밍구",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: Sizes.size18,
-                    fontWeight: FontWeight.bold,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width - 150,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "@밍구",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Sizes.size18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Gaps.v10,
-                Text(
-                  "There is Universal Studios!!",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: Sizes.size16,
+                  Gaps.v10,
+                  const ReadMoreText(
+                    "This is Universal Studios!!",
+                    trimLines: 2,
+                    colorClickableText: Colors.white,
+                    trimMode: TrimMode.Line,
+                    trimCollapsedText: ' See more',
+                    trimExpandedText: ' Less',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Sizes.size16,
+                    ),
+                    moreStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: Sizes.size16,
+                        fontWeight: FontWeight.bold),
+                    lessStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: Sizes.size16,
+                        fontWeight: FontWeight.bold),
                   ),
-                )
-              ],
+                  Gaps.v10,
+                  SizedBox(
+                    height: Sizes.size20,
+                    width: MediaQuery.of(context).size.width - 150,
+                    child: Row(
+                      children: [
+                        const Text(
+                          '♫',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: Sizes.size16,
+                          ),
+                        ),
+                        Gaps.h10,
+                        Expanded(
+                          child: Marquee(
+                            text: 'Eminem - Lose Yourself',
+                            style: const TextStyle(
+                              color: Colors.white,
+                            ),
+                            blankSpace: Sizes.size20,
+                            velocity: Sizes.size20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           Positioned(
