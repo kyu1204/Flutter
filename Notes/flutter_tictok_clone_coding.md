@@ -337,3 +337,21 @@
 ![refresh](/Assets/refresh.gif)
 
 ## Comments Section
+### showModalBottomSheet
+1. showModalBottomSheet
+	1. It is a built-in function in the Flutter framework that displays a bottom sheet that slides up from the bottom of the screen to display additional content and options for the user. 
+	2. It is commonly used to present additional information, settings, or actions that are related to the current screen or context.
+### Comments
+1. Scaffold
+2. AppBar
+3. ListView.separated
+4. Row
+5. CircleAvatar
+6. Expanded
+7. Column
+8. Text
+9. BottomAppBar
+
+![comments](/Assets/20230304170243.png)
+
+### Add Comment

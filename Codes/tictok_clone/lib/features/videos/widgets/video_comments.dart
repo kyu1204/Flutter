@@ -68,7 +68,37 @@ class _VideoCommentsState extends State<VideoComments> {
                     )
                   ],
                 ),
-              )
+              ),
+              Gaps.h10,
+              Column(
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.heart,
+                    size: Sizes.size20,
+                    color: Colors.grey.shade500,
+                  ),
+                  Gaps.v2,
+                  Text(
+                    "52.2K",
+                    style: TextStyle(
+                      color: Colors.grey.shade500,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.white,
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 18,
+                backgroundColor: Colors.grey.shade500,
+                foregroundColor: Colors.white,
+                child: const Text("밍구"),
+              ),
             ],
           ),
         ),
