@@ -85,6 +85,7 @@ class _VideoPostState extends State<VideoPost>
     }
     await showModalBottomSheet(
       context: context,
+      backgroundColor: Colors.transparent,
       builder: (context) => const VideoComments(),
     );
     if (!_videoPlayerController.value.isPlaying) {
