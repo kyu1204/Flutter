@@ -383,3 +383,15 @@
 ![text input action](/Assets/20230304175224.png)
 
 ## Discover
+### Light Navigation
+1. Color change
+	1. _selectedIndex == 0
+		1. bacgroundColor = Black
+		2. IconColor = White
+	2. _selectedIndex != 0
+		1. backgroundColor = White
+		2. IconColor = Black
+
+![light navigation](/Assets/20230310145512.png)
+
+### TabBar
