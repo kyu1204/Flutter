@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tictok_clone/constants/gaps.dart';
@@ -23,7 +24,7 @@ class DiscoverScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 1,
-          title: const Text("Discover"),
+          title: const CupertinoSearchTextField(),
           bottom: TabBar(
             splashFactory: NoSplash.splashFactory,
             padding: const EdgeInsets.symmetric(
@@ -60,13 +61,19 @@ class DiscoverScreen extends StatelessWidget {
               ),
               itemBuilder: (context, index) => Column(
                 children: [
-                  AspectRatio(
-                    aspectRatio: 9 / 16,
-                    child: FadeInImage.assetNetwork(
-                      fit: BoxFit.cover,
-                      placeholder: "assets/images/placeholder.jpeg",
-                      image:
-                          "https://source.unsplash.com/random/200x${355 + index}",
+                  Container(
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(Sizes.size4),
+                    ),
+                    child: AspectRatio(
+                      aspectRatio: 9 / 16,
+                      child: FadeInImage.assetNetwork(
+                        fit: BoxFit.cover,
+                        placeholder: "assets/images/placeholder.jpeg",
+                        image:
+                            "https://source.unsplash.com/random/200x${355 + index}",
+                      ),
                     ),
                   ),
                   Gaps.v10,
