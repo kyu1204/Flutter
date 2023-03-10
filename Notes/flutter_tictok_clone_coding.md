@@ -413,3 +413,16 @@
 ![tabbar](/Assets/20230310153117.png)
 
 ### GridView
+1. GridView.builder
+	1. It is a powerful tool for displaying a scrollable grid of items in a flexible and efficient manner. 
+	2. It creates a grid view with a scrollable set of children based on the data provided via a builder function.
+	3. itemCount
+	4. padding
+	5. gridDelegate
+		1. SliverGridDelegateWithFixedCrossAxisCount (This name is too looooong.. 😅)
+			1. crossAxisCount: column count
+			2. corssAxisSpacing: horizontal spacing
+			3. mainAxisSpacing: vertical spacing
+			4. childAspectRatio: child width, height Ratio
+	6. itemBuilder
+
