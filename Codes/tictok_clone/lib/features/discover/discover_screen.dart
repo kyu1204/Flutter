@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictok_clone/constants/sizes.dart';
 
 final tabs = [
   "Top",
@@ -7,6 +8,7 @@ final tabs = [
   "Sounds",
   "LIVE",
   "Shopping",
+  "Brands",
 ];
 
 class DiscoverScreen extends StatelessWidget {
@@ -15,21 +17,28 @@ class DiscoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: tabs.length,
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Discover"),
           bottom: TabBar(
+            splashFactory: NoSplash.splashFactory,
+            padding: const EdgeInsets.symmetric(
+              horizontal: Sizes.size16,
+            ),
+            isScrollable: true,
             indicatorColor: Colors.black,
             labelColor: Colors.black,
+            labelStyle: const TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: Sizes.size16,
+            ),
             unselectedLabelColor: Colors.grey.shade500,
-            tabs: const [
-              Tab(
-                text: "Top",
-              ),
-              Tab(
-                text: "Users",
-              )
+            tabs: [
+              for (var tab in tabs)
+                Tab(
+                  text: tab,
+                )
             ],
           ),
         ),
