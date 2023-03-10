@@ -445,3 +445,13 @@
 ![grid item](/Assets/20230310173040.png)
 
 ### CupertinoSearchTextField
+1. CupertinoSearchTexField
+	1. It is provides a search bar with a similar design to the iOS search bar. 
+	2. It is part of the `cupertino` package, which provides a set of Cupertino-style widgets for building iOS-style applications.
+	3. The `CupertinoSearchTextField` widget can be customized with various properties, such as `placeholder`, `prefixIcon`, `suffixIcon`, `onChanged`, `onSubmitted`, `keyboardType`, and many more.
+2. MaterialApp
+	1. textSelectionTheme
+		1. TextSelectionThemeData
+			1. cursorColor
+3. Scaffold
+	1. resizeToAvoidBottomInset: false
