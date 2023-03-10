@@ -70,6 +70,22 @@ class DiscoverScreen extends StatelessWidget {
                     Gaps.v10,
                     const Text(
                       "This is vary long caption for my tictok that i'm upload just now currently.",
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: Sizes.size18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Gaps.v8,
+                    Row(
+                      children: const [
+                        CircleAvatar(
+                          radius: 15,
+                          backgroundImage: NetworkImage(
+                              "https://avatars.githubusercontent.com/u/33680799?v=4"),
+                        )
+                      ],
                     )
                   ],
                 ),
