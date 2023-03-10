@@ -395,3 +395,21 @@
 ![light navigation](/Assets/20230310145512.png)
 
 ### TabBar
+1. AppBar
+	1. bottom
+		1. TabBar
+			1. splashFactory
+				1. NoSplash
+			2. padding
+			3. isScrollable
+			4. indicatorColor
+			5. labelColor
+			6. labelStyle
+			7. unselectedLabelColor
+			8. Tab
+	2. body
+		1. TabBarView
+
+![tabbar](/Assets/20230310153117.png)
+
+### 
