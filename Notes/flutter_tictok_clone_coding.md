@@ -426,3 +426,6 @@
 			4. childAspectRatio: child width, height Ratio
 	6. itemBuilder
 
+![grid view](/Assets/20230310160309.png)
+
+### GridItem
