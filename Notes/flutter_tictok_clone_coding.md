@@ -429,4 +429,19 @@
 ![grid view](/Assets/20230310160309.png)
 
 ### Grid Item
-1. 
+1. FadeInImage
+	1. It is a pre-built widget that provides a simple way to load images with a placeholder image that fades out as the actual image loads. 
+	2. This is useful when loading large or slow images, as it provides a visual cue to the user that the image is still loading.
+	3. `FadeInImage` is a useful tool for loading images in Flutter, as it provides a simple and visually pleasing way to handle slow or large images.
+2. AspectRatio
+	1. It is a layout widget that can be used to enforce a specific aspect ratio for its child widget. 
+	2. This means that the child widget will maintain a fixed width-to-height ratio, regardless of the available screen space or the size of the child widget.
+3. DefaultTextStyle
+4. Text
+	1. maxLines
+	2. overflow
+		1. TextOverflow.ellipsis
+
+![grid item](/Assets/20230310173040.png)
+
+### CupertinoSearchTextField
