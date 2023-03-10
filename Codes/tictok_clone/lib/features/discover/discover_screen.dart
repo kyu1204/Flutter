@@ -84,6 +84,10 @@ class DiscoverScreen extends StatelessWidget {
                           radius: 15,
                           backgroundImage: NetworkImage(
                               "https://avatars.githubusercontent.com/u/33680799?v=4"),
+                        ),
+                        Gaps.h4,
+                        Expanded(
+                          child: Text("My avatar is going to be very long."),
                         )
                       ],
                     )
