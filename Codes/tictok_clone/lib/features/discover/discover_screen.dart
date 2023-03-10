@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictok_clone/constants/gaps.dart';
 import 'package:tictok_clone/constants/sizes.dart';
 
 final tabs = [
@@ -46,18 +47,34 @@ class DiscoverScreen extends StatelessWidget {
         body: TabBarView(
           children: [
             GridView.builder(
-                itemCount: 20,
-                padding: const EdgeInsets.all(
-                  Sizes.size6,
+              itemCount: 20,
+              padding: const EdgeInsets.all(
+                Sizes.size6,
+              ),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: Sizes.size10,
+                mainAxisSpacing: Sizes.size10,
+                childAspectRatio: 9 / 20,
+              ),
+              itemBuilder: (context, index) => AspectRatio(
+                aspectRatio: 9 / 16,
+                child: Column(
+                  children: [
+                    FadeInImage.assetNetwork(
+                      fit: BoxFit.cover,
+                      placeholder: "assets/images/placeholder.jpeg",
+                      image:
+                          "https://source.unsplash.com/random/200x${355 + index}",
+                    ),
+                    Gaps.v10,
+                    const Text(
+                      "This is vary long caption for my tictok that i'm upload just now currently.",
+                    )
+                  ],
                 ),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: Sizes.size10,
-                  mainAxisSpacing: Sizes.size10,
-                  childAspectRatio: 9 / 16,
-                ),
-                itemBuilder: (context, index) => FadeInImage.assetNetwork(
-                    placeholder: "aseets/images/placeholder.jpg", image: "")),
+              ),
+            ),
             for (var tab in tabs.skip(1))
               Center(
                 child: Text(
