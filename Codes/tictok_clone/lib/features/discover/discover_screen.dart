@@ -22,12 +22,19 @@ class DiscoverScreen extends StatefulWidget {
 }
 
 class _DiscoverScreenState extends State<DiscoverScreen> {
+  final TextEditingController _textEditingController =
+      TextEditingController(text: "Initial Text");
+
   void _onSearchChanged(String value) {
     print("Searching on $value");
   }
 
   void _onSearchSubmitted(String value) {
     print("Submitted on $value");
+  }
+
+  void _onTabBarTap(index) {
+    FocusScope.of(context).unfocus();
   }
 
   @override
@@ -39,6 +46,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
         appBar: AppBar(
           elevation: 1,
           title: CupertinoSearchTextField(
+            controller: _textEditingController,
             onChanged: _onSearchChanged,
             onSubmitted: _onSearchSubmitted,
           ),
@@ -55,6 +63,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
               fontSize: Sizes.size16,
             ),
             unselectedLabelColor: Colors.grey.shade500,
+            onTap: _onTabBarTap,
             tabs: [
               for (var tab in tabs)
                 Tab(
