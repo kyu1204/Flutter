@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tictok_clone/constants/sizes.dart';
-import 'package:tictok_clone/features/main_navigation/main_navigation.dart';
+import 'package:tictok_clone/features/inbox/activity_screen.dart';
 
 void main() {
   runApp(const TicTokApp());
@@ -19,6 +19,8 @@ class TicTokApp extends StatelessWidget {
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Color(0xFFE9435A),
         ),
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
@@ -30,7 +32,7 @@ class TicTokApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const MainNavigationScreen(),
+      home: const ActivityScreen(),
     );
   }
 }
